@@ -1,0 +1,3781 @@
+<!DOCTYPE html>
+<!--
+🚀 ГОТОВОЕ ПОРТФОЛИО АЛЕКСАНДРА - ПРОФЕССИОНАЛЬНО ИСПРАВЛЕННОЕ
+📁 ПОЛОЖИ ЭТИ ФАЙЛЫ В ТУ ЖЕ ПАПКУ ЧТО И ЭТОТ HTML:
+
+🖼️ АВАТАРКА:
+- Avatar.JPG (твоя фотография)
+
+🎵 ЗВУКИ (НЕОБЯЗАТЕЛЬНО - ЕСЛИ НЕТ ФАЙЛОВ, ЗВУКИ ПРОСТО НЕ БУДУТ ИГРАТЬ):
+
+📂 Основные:
+- bg_music.mp3 (фоновая музыка)
+- hover.mp3 (наведение на кнопки)  
+- click.mp3 (клик по кнопкам)
+- page_turn.mp3 (переход между страницами)
+- notification.mp3 (уведомления)
+
+🎮 Игры:
+- snake_eat.mp3, snake_death.mp3 (змейка)
+- tetris_move.mp3, tetris_line.mp3, tetris_rotate.mp3, tetris_gameover.mp3 (тетрис)
+- 2048_merge.mp3, 2048_move.mp3, 2048_win.mp3 (2048)
+- pong_hit.mp3, pong_goal.mp3, pong_bounce.mp3 (понг)
+- car_engine.mp3, car_crash.mp3, car_accelerate.mp3 (гонки)
+- asteroid_shoot.mp3, asteroid_hit.mp3, asteroid_engine.mp3, asteroid_destroy.mp3 (астероиды)
+
+🛠️ Инструменты:
+- tool_calc.mp3, tool_generate.mp3, tool_convert.mp3, tool_error.mp3
+
+🚀 ПРОСТО ОТКРОЙ ЭТОТ HTML ФАЙЛ В БРАУЗЕРЕ И ВСЁ ГОТОВО!
+-->
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 Александр - Портфолио</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-touch-callout: none;
+            -webkit-text-size-adjust: none;
+        }
+
+        *::selection {
+            background: transparent !important;
+            color: inherit !important;
+        }
+
+        *::-moz-selection {
+            background: transparent !important;
+            color: inherit !important;
+        }
+
+        *::-webkit-selection {
+            background: transparent !important;
+            color: inherit !important;
+        }
+
+        :root {
+            --primary: #667eea;
+            --secondary: #764ba2;
+            --bg-dark: #0a0a0a;
+            --text-light: #ffffff;
+            --glass: rgba(255, 255, 255, 0.08);
+            --glass-border: rgba(255, 255, 255, 0.15);
+            --success: #00ff88;
+            --warning: #ffaa00;
+            --danger: #ff4444;
+        }
+
+        /* 🚀 ПРИНУДИТЕЛЬНОЕ УПРАВЛЕНИЕ ТЕМАМИ - ИГНОРИРУЕМ СИСТЕМНЫЕ НАСТРОЙКИ */
+        html {
+            color-scheme: dark !important;
+            height: 100%;
+            min-height: 100%;
+        }
+
+        html[data-theme="light"] {
+            color-scheme: light !important;
+            --bg-dark: #ffffff !important;
+            --text-light: #1a1a1a !important;
+            --glass: rgba(0, 0, 0, 0.08) !important;
+            --glass-border: rgba(0, 0, 0, 0.15) !important;
+            --primary: #5a67d8 !important;
+            --secondary: #667eea !important;
+        }
+
+        /* 🔥 ПРИНУДИТЕЛЬНЫЕ СТИЛИ ДЛЯ СВЕТЛОЙ ТЕМЫ */
+        html[data-theme="light"] body {
+            background: #ffffff !important;
+            color: #1a1a1a !important;
+        }
+
+        html[data-theme="light"] .bg-gradient {
+            background: #ffffff !important;
+        }
+
+        html[data-theme="light"] .matrix-canvas {
+            opacity: 0.3 !important;
+        }
+
+        html[data-theme="light"] .modal {
+            background: rgba(0, 0, 0, 0.6) !important;
+        }
+
+        html[data-theme="light"] .modal-content {
+            background: rgba(255, 255, 255, 0.95) !important;
+            color: #1a1a1a !important;
+            border: 2px solid rgba(0, 0, 0, 0.2) !important;
+        }
+
+        html[data-theme="light"] .game-canvas {
+            border-color: var(--primary) !important;
+        }
+
+        html[data-theme="light"] .tool-output {
+            background: #f5f5f5 !important;
+            color: #333 !important;
+        }
+
+        html[data-theme="light"] .skill-bar {
+            background: rgba(0,0,0,0.1) !important;
+        }
+
+        /* 🔥 ПРИНУДИТЕЛЬНЫЕ СТИЛИ ДЛЯ ВСЕХ КАРТОЧЕК В СВЕТЛОЙ ТЕМЕ */
+        html[data-theme="light"] .content-card,
+        html[data-theme="light"] .skill-category,
+        html[data-theme="light"] .stat-card,
+        html[data-theme="light"] .order-card,
+        html[data-theme="light"] .project-card,
+        html[data-theme="light"] .contact-card,
+        html[data-theme="light"] .tool-card {
+            background: rgba(0, 0, 0, 0.08) !important;
+            color: #1a1a1a !important;
+            border: 1px solid rgba(0, 0, 0, 0.15) !important;
+        }
+
+        html[data-theme="light"] .nav-btn {
+            background: rgba(0, 0, 0, 0.08) !important;
+            color: #1a1a1a !important;
+            border: 1px solid rgba(0, 0, 0, 0.15) !important;
+        }
+
+        html[data-theme="light"] .nav-btn:hover,
+        html[data-theme="light"] .nav-btn.active {
+            background: var(--primary) !important;
+            color: white !important;
+        }
+
+        html[data-theme="light"] .page-dot {
+            background: rgba(0, 0, 0, 0.08) !important;
+            border: 3px solid rgba(0, 0, 0, 0.15) !important;
+        }
+
+        html[data-theme="light"] .page-dot::before {
+            background: #1a1a1a !important;
+        }
+
+        html[data-theme="light"] .notification {
+            background: rgba(255, 255, 255, 0.95) !important;
+            color: #1a1a1a !important;
+            border: 1px solid rgba(0, 0, 0, 0.15) !important;
+        }
+
+        html[data-theme="light"] .contact-card a {
+            color: #1a1a1a !important;
+        }
+
+        /* 🔥 ПРОФЕССИОНАЛЬНОЕ ИСПРАВЛЕНИЕ LAYOUT'А */
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-light) !important;
+            background: var(--bg-dark) !important;
+            min-height: 100vh;
+            height: auto;
+            overflow-x: hidden;
+            overflow-y: auto;
+            position: relative;
+            font-size: 18px;
+        }
+
+        body::selection {
+            background: transparent;
+        }
+
+        body::-moz-selection {
+            background: transparent;
+        }
+
+        .bg-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: -1;
+            background: #000;
+            overflow: hidden;
+        }
+
+        /* 🔥 ИСПРАВЛЕННАЯ МАТРИЦА - ВСЕГДА ВИДНА НО НЕ МЕШАЕТ */
+        .matrix-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.6 !important;
+            z-index: -1 !important;
+            pointer-events: none !important;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            z-index: 2000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 0;
+            flex-wrap: wrap;
+        }
+
+        .nav-group {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            background: var(--glass);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            padding: 8px 12px;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 13px;
+            font-weight: 500;
+            text-decoration: none;
+            white-space: nowrap;
+            min-width: 55px;
+            text-align: center;
+        }
+
+        .nav-btn:hover {
+            background: var(--primary);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .nav-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* 🔥 ПРОФЕССИОНАЛЬНОЕ ИСПРАВЛЕНИЕ КОНТЕЙНЕРОВ */
+        .page-container {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            height: auto;
+            overflow: visible;
+            z-index: 100;
+        }
+
+        .page {
+            min-height: 100vh;
+            height: auto;
+            width: 100%;
+            position: relative;
+            z-index: 100;
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.6s ease;
+            opacity: 1;
+            overflow: visible;
+            padding-bottom: 60px; /* Добавляем отступ снизу для навигации */
+        }
+
+        .page.hidden {
+            display: none;
+        }
+
+        .page.slide-out-left {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+
+        .page.slide-out-right {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+
+        .page.slide-in-left {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+
+        .page.slide-in-right {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+
+        .page.active {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px;
+            padding-top: 90px;
+            padding-bottom: 40px;
+            position: relative;
+            z-index: 200;
+            min-height: auto;
+            height: auto;
+            overflow: visible;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 40px 0 30px;
+            position: relative;
+            z-index: 300;
+            min-height: auto;
+            height: auto;
+        }
+
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid var(--glass-border);
+            transition: all 0.3s ease;
+            background-image: url('./Avatar.JPG');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            
+            /* 
+            🖼️ АВАТАРКА НАСТРОЕНА НА Avatar.JPG
+            Положи файл Avatar.JPG в ту же папку что и этот HTML файл
+            
+            Если хочешь другое имя файла:
+            1. Переименуй свой файл на Avatar.JPG 
+            ИЛИ
+            2. Измени './Avatar.JPG' на './твое_имя_файла.jpg'
+            
+            Поддерживаемые форматы: .jpg, .jpeg, .png, .gif, .webp
+            */
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientShift 3s ease-in-out infinite;
+            position: relative;
+        }
+
+        .hero-title.portfolio-title {
+            font-size: 5rem;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
+            position: relative;
+            background: linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c, #4facfe, #00f2fe);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: portfolioGradient 8s ease-in-out infinite;
+            margin: 40px 0;
+        }
+
+        @keyframes portfolioGradient {
+            0%, 100% { background-position: 0% 50%; }
+            25% { background-position: 100% 50%; }
+            50% { background-position: 50% 100%; }
+            75% { background-position: 100% 0%; }
+        }
+
+        .hero-title.portfolio-title::before {
+            content: '⭐';
+            position: absolute;
+            left: -50px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            animation: pulse 3s infinite;
+        }
+
+        .hero-title.portfolio-title::after {
+            content: '⭐';
+            position: absolute;
+            right: -50px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            animation: pulse 3s infinite 1.5s;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; transform: translateY(-50%) scale(1); }
+            50% { opacity: 1; transform: translateY(-50%) scale(1.1); }
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .hero-subtitle {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+            border-right: 2px solid var(--primary);
+            display: inline-block;
+            padding-right: 5px;
+            animation: blink 1s infinite;
+            word-wrap: break-word;
+            max-width: 100%;
+        }
+
+        @keyframes blink {
+            0%, 50% { border-color: var(--primary); }
+            51%, 100% { border-color: transparent; }
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+            margin: 25px 0;
+        }
+
+        .stat-card {
+            background: var(--glass);
+            backdrop-filter: blur(8px);
+            border: 1px solid var(--glass-border);
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+
+        /* 🔥 ИСПРАВЛЕНИЕ ТЕКСТОВОГО КОНТЕНТА */
+        #aboutText {
+            line-height: 1.7;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            white-space: normal;
+            hyphens: auto;
+            -webkit-hyphens: auto;
+            -moz-hyphens: auto;
+            margin-bottom: 20px;
+        }
+
+        .content-card {
+            background: var(--glass);
+            backdrop-filter: blur(8px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            margin-top: 20px;
+            overflow: visible;
+            transition: transform 0.3s ease;
+            position: relative;
+            z-index: 300;
+            min-height: auto;
+            height: auto;
+        }
+
+        .content-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .content-section {
+            padding: 25px;
+            border-bottom: 1px solid var(--glass-border);
+            min-height: auto;
+            height: auto;
+            overflow: visible;
+        }
+
+        .content-section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            position: relative;
+            padding-bottom: 8px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 2px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .skill-category {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            padding: 15px;
+            border-radius: 12px;
+        }
+
+        .skill-item {
+            margin: 12px 0;
+        }
+
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 6px;
+            font-size: 0.9rem;
+        }
+
+        .skill-bar {
+            width: 100%;
+            height: 6px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 10px;
+            transition: width 2s ease;
+            width: 0%;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 15px;
+        }
+
+        .tag {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .contacts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .contact-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .contact-card h3 {
+            /* Разрешаем выделение для заголовков контактов */
+            -webkit-user-select: text;
+            -moz-user-select: text;
+            -ms-user-select: text;
+            user-select: text;
+        }
+
+        .contact-card a {
+            color: var(--text-light);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+            font-size: 0.85rem;
+            word-break: break-all;
+            overflow-wrap: break-word;
+            display: block;
+            max-width: 100%;
+            /* Разрешаем выделение для контактов */
+            -webkit-user-select: text;
+            -moz-user-select: text;
+            -ms-user-select: text;
+            user-select: text;
+        }
+
+        .contact-card a:hover {
+            opacity: 1;
+            color: var(--primary);
+        }
+
+        .order-section {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+        }
+
+        .order-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .order-card {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+
+        .order-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.15);
+        }
+
+        .order-card h4 {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .order-card p {
+            opacity: 0.9;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .project-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            padding: 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h4 {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .project-card p {
+            opacity: 0.9;
+            font-size: 0.9rem;
+        }
+
+        .page-navigation {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2000;
+            display: flex;
+            gap: 25px;
+        }
+
+        .page-dot {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: var(--glass);
+            border: 3px solid var(--glass-border);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .page-dot::before {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: var(--text-light);
+            opacity: 0.5;
+            transition: all 0.3s ease;
+        }
+
+        .page-dot.active {
+            background: var(--primary);
+            transform: scale(1.2);
+            box-shadow: 0 0 20px rgba(102, 126, 234, 0.7);
+        }
+
+        .page-dot.active::before {
+            background: white;
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        .page-dot:hover {
+            background: var(--secondary);
+            transform: scale(1.15);
+            box-shadow: 0 0 15px rgba(118, 75, 162, 0.5);
+        }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 10000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(10px);
+            padding: 10px;
+        }
+
+        .modal-content {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            padding: 20px;
+            max-width: 95vw;
+            max-height: 90vh;
+            overflow: auto;
+            position: relative;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--danger);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .game-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .game-btn {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 16px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+            transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
+        }
+
+        .game-btn:hover {
+            transform: translateY(-1px) scale(1.02);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+
+        .game-btn:active {
+            transform: translateY(0) scale(0.98);
+        }
+
+        /* 🔥 ИСПРАВЛЕНИЕ ТЕТРИСА - НЕ ВЫХОДИТ ЗА ГРАНИЦЫ */
+        .game-canvas {
+            border: 2px solid var(--primary);
+            border-radius: 8px;
+            background: #000;
+            margin: 10px auto;
+            display: block;
+            max-width: calc(100vw - 60px);
+            max-height: calc(100vh - 300px);
+            width: auto;
+            height: auto;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .tool-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 15px;
+        }
+
+        .tool-input {
+            width: 100%;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 6px;
+            padding: 8px;
+            color: var(--text-light);
+            margin: 8px 0;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .tool-output {
+            background: #000;
+            color: #00ff00;
+            padding: 12px;
+            border-radius: 6px;
+            font-family: 'Courier New', Monaco, monospace;
+            margin: 8px 0;
+            min-height: 50px;
+            font-size: 11px;
+            word-break: break-all;
+        }
+
+        .notification {
+            position: fixed;
+            top: 90px;
+            right: 15px;
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 12px 16px;
+            z-index: 9998;
+            transform: translateX(350px);
+            transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            max-width: 280px;
+            font-size: 14px;
+            font-weight: 500;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .notification.show {
+            transform: translateX(0);
+        }
+
+        .notification.success { border-left: 4px solid var(--success); }
+        .notification.warning { border-left: 4px solid var(--warning); }
+        .notification.error { border-left: 4px solid var(--danger); }
+
+        .hidden { 
+            display: none !important; 
+        }
+        
+        .visible { 
+            display: flex !important; 
+        }
+
+        .disclaimer {
+            background: rgba(255, 170, 0, 0.1);
+            border: 1px solid rgba(255, 170, 0, 0.3);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        .projects-btn {
+            background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+            color: white;
+            border: none;
+            border-radius: 15px;
+            padding: 15px 25px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin: 20px auto;
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+        }
+
+        .projects-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+        }
+
+        .projects-btn:active {
+            transform: translateY(-1px);
+        }
+
+        /* 🔥 МОБИЛЬНАЯ АДАПТАЦИЯ - ПРОФЕССИОНАЛЬНАЯ */
+        @media (max-width: 768px) {
+            .navbar {
+                top: 5px;
+                left: 5px;
+                right: 5px;
+                flex-direction: column;
+                gap: 8px;
+                padding: 8px;
+                background: var(--glass);
+                backdrop-filter: blur(8px);
+                border-radius: 15px;
+                border: 1px solid var(--glass-border);
+            }
+            
+            .nav-group {
+                justify-content: center;
+                width: 100%;
+            }
+            
+            .nav-btn {
+                font-size: 12px;
+                padding: 6px 10px;
+                min-width: 50px;
+            }
+            
+            .main-container {
+                padding: 10px;
+                padding-top: 140px;
+                padding-bottom: 80px;
+                min-height: auto;
+                height: auto;
+                overflow: visible;
+            }
+            
+            .hero {
+                padding: 20px 0 15px;
+                min-height: auto;
+                height: auto;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-title.portfolio-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-title.portfolio-title::before,
+            .hero-title.portfolio-title::after {
+                display: none;
+            }
+            
+            .hero-subtitle {
+                font-size: 0.9rem;
+            }
+            
+            .avatar {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+            }
+            
+            .stat-card {
+                padding: 12px;
+            }
+            
+            .stat-number {
+                font-size: 1.2rem;
+            }
+            
+            .stat-label {
+                font-size: 0.7rem;
+            }
+            
+            .content-section {
+                padding: 15px;
+                min-height: auto;
+                height: auto;
+                overflow: visible;
+            }
+            
+            .section-title {
+                font-size: 1.3rem;
+            }
+            
+            .skills-grid,
+            .contacts-grid,
+            .order-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            
+            .order-section {
+                padding: 20px;
+            }
+            
+            .modal-content {
+                margin: 5px;
+                padding: 15px;
+                max-width: calc(100vw - 10px);
+            }
+            
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .game-canvas {
+                max-width: calc(100vw - 40px);
+                max-height: calc(100vh - 200px);
+                width: auto;
+                height: auto;
+            }
+            
+            .tags {
+                gap: 4px;
+            }
+            
+            .tag {
+                padding: 4px 8px;
+                font-size: 0.7rem;
+            }
+
+            #aboutText {
+                line-height: 1.6;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            
+            .hero-title.portfolio-title {
+                font-size: 2.2rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .notification {
+                max-width: 200px;
+                font-size: 12px;
+            }
+
+            .main-container {
+                padding-bottom: 100px;
+            }
+
+            #aboutText {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-gradient">
+        <canvas class="matrix-canvas" id="matrixCanvas"></canvas>
+    </div>
+
+    <div class="navbar">
+        <div class="nav-group">
+            <button class="nav-btn" onclick="toggleTheme()" id="themeBtn" data-translate="theme">🌙 Тема</button>
+            <button class="nav-btn" onclick="showModal('gamesModal')" data-translate="games">🎮 Игры</button>
+            <button class="nav-btn" onclick="showModal('toolsModal')" data-translate="tools">🛠️ Инструменты</button>
+        </div>
+        <div class="nav-group">
+            <button class="nav-btn active" onclick="setLanguage('ru')" id="langRu">RU</button>
+            <button class="nav-btn" onclick="setLanguage('en')" id="langEn">EN</button>
+            <button class="nav-btn" onclick="setLanguage('es')" id="langEs">ES</button>
+        </div>
+    </div>
+
+    <div class="page-container">
+        <!-- Страница 1: Главная -->
+        <div class="page active" id="page1">
+            <div class="main-container">
+                <div class="hero">
+                    <div class="avatar">
+                    </div>
+                    <h1 class="hero-title">Александр</h1>
+                    <p class="hero-subtitle" id="heroSubtitle">Будущий миллионер | 14 лет | Создатель игр и утилит</p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number" data-target="150">0</div>
+                            <div class="stat-label" data-translate="days">Дней изучения</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" data-target="9">0</div>
+                            <div class="stat-label" data-translate="languages">Языков/инструментов</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" data-target="1500">0</div>
+                            <div class="stat-label" data-translate="lines">Строк кода</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" data-target="75">0</div>
+                            <div class="stat-label" data-translate="problems">Проблем решено</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <section class="content-section">
+                        <h2 class="section-title" data-translate="about-title">Обо мне</h2>
+                        <p id="aboutText">
+                            Привет! Меня зовут Александр, мне 14 лет, и я амбициозный предприниматель в сфере технологий. 
+                            Активно изучаю разработку игр, утилит и Python с помощью современных AI инструментов для максимальной эффективности обучения. 
+                            Использую Linux (Zorin OS и AntiX) как основную систему и имею глубокие знания системного администрирования.
+                            <br><br>
+                            В видеомонтаже достиг профессионального уровня - отлично владею Canva и CapCut, создаю качественный контент. 
+                            Но сейчас полностью сосредоточен на программировании и создании интерактивных проектов для достижения своих амбициозных целей.
+                            <br><br>
+                            🎯 <strong>Главная миссия:</strong> Стать Senior Создатель игр и утилитом и создать 3 источника пассивного дохода для достижения финансовой независимости! 
+                            💫 Планирую развиваться в сфере геймдева, утилит и креативной разработки, создать несколько технологических стартапов и переехать в Монако до 25 лет.
+                            <br><br>
+                            🚀 Я не просто изучаю технологии - я создаю будущее! Использую все современные инструменты для быстрого обучения и верю, что смогу изменить мир через технологии!
+                        </p>
+                        <div class="tags">
+                            <span class="tag" data-translate="tag-gamedev">🎮 Разработка игр</span>
+                            <span class="tag" data-translate="tag-utilities">🧩 Утилиты и скрипты</span>
+                            <span class="tag" data-translate="tag-community">🌐 Комьюнити-подход</span>
+                            <span class="tag" data-translate="tag-montage">🎬 Монтаж (CapCut / DaVinci)</span>
+                            <span class="tag" data-translate="tag-devops">⚙️ Создатель игр и утилит</span>
+                            <span class="tag" data-translate="tag-ai">🤖 AI/ML эксперт</span>
+                            <span class="tag" data-translate="tag-python">🐍 Python разработка</span>
+                            <span class="tag" data-translate="tag-video">🎬 Профи видеомонтаж</span>
+                            <span class="tag" data-translate="tag-linux">🐧 Linux гуру</span>
+                            <span class="tag" data-translate="tag-millionaire">💰 Будущий миллионер</span>
+                            <span class="tag" data-translate="tag-startup">🚀 Стартап основатель</span>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <h2 class="section-title" data-translate="skills-title">Мои навыки</h2>
+                        <div class="skills-grid">
+                            <div class="skill-category">
+                                <h3 data-translate="programming">💻 Программирование</h3>
+                                <div class="skill-item">
+                                    <div class="skill-header">
+                                        <span>Python</span>
+                                        <span>35%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="35"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-header">
+                                        <span>C++/C#</span>
+                                        <span>5%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="5"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-header">
+                                        <span>Linux</span>
+                                        <span>80%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="80"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-header">
+                                        <span data-translate="ai-understanding">AI понимание</span>
+                                        <span>60%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="60"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h3 data-translate="video-editing">🎬 Видеомонтаж</h3>
+                                <div class="skill-item">
+                                    <div class="skill-header">
+                                        <span>Canva</span>
+                                        <span>90%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="90"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-header">
+                                        <span>CapCut</span>
+                                        <span>80%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="80"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-header">
+                                        <span>DaVinci</span>
+                                        <span>50%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="50"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-header">
+                                        <span>After Effects/Premiere Pro</span>
+                                        <span data-translate="no-money">0% (потому что денег нет)</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="0"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <h2 class="section-title" data-translate="projects-title">📂 Мои проекты</h2>
+                        <div class="projects-grid">
+                            <div class="project-card" style="background: rgba(102,126,234,0.1);">
+                                <h4 data-translate="project1-title">🐍 Python Автоматизация</h4>
+                                <p data-translate="project1-desc">Скрипт для автоматизации рутинных задач</p>
+                                <p style="font-size: 0.8rem; opacity: 0.8;">Python, Selenium, Schedule</p>
+                            </div>
+                            <div class="project-card" style="background: rgba(0,255,136,0.1);">
+                                <h4 data-translate="project2-title">🐧 Linux Конфиги</h4>
+                                <p data-translate="project2-desc">Коллекция настроек для Linux систем</p>
+                                <p style="font-size: 0.8rem; opacity: 0.8;">Bash, Zsh, Neovim</p>
+                            </div>
+                            <div class="project-card" style="background: rgba(255,170,0,0.1);">
+                                <h4 data-translate="project3-title">🎬 Видео контент</h4>
+                                <p data-translate="project3-desc">Качественные ролики для соцсетей</p>
+                                <p style="font-size: 0.8rem; opacity: 0.8;">Canva, CapCut, Motion Graphics</p>
+                            </div>
+                            <div class="project-card" style="background: rgba(255,68,68,0.1);">
+                                <h4 data-translate="project4-title">🌐 Это портфолио</h4>
+                                <p data-translate="project4-desc">Интерактивное портфолио с играми</p>
+                                <p style="font-size: 0.8rem; opacity: 0.8;">HTML, CSS, JavaScript</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <h2 class="section-title" data-translate="contacts-title">Контакты</h2>
+                        <div class="contacts-grid">
+                            <div class="contact-card">
+                                <div class="contact-icon">📧</div>
+                                <h3>Email</h3>
+                                <a href="mailto:konserv1help@gmail.com">konserv1help@gmail.com</a>
+                            </div>
+                            <div class="contact-card">
+                                <div class="contact-icon">💬</div>
+                                <h3>Discord</h3>
+                                <a href="https://discord.com/users/sudo_0nigiri">sudo_0nigiri</a>
+                            </div>
+                            <div class="contact-card">
+                                <div class="contact-icon">🔫</div>
+                                <h3>Guns</h3>
+                                <a href="https://guns.lol/0nigiri">guns.lol/0nigiri</a>
+                            </div>
+                            <div class="contact-card">
+                                <div class="contact-icon">📷</div>
+                                <h3>Instagram</h3>
+                                <a href="https://www.instagram.com/sudo_0nigiri/">@sudo_0nigiri</a>
+                            </div>
+                            <div class="contact-card">
+                                <div class="contact-icon">🐙</div>
+                                <h3>GitHub</h3>  
+                                <a href="https://github.com/0nigiris">github.com/0nigiris</a>
+                            </div>
+                            <div class="contact-card">
+                                <div class="contact-icon">🎥</div>
+                                <h3>YouTube</h3>
+                                <a href="https://www.youtube.com/@Konserv1">@Konserv1</a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <!-- Страница 2: ПОРТФОЛИО -->
+        <div class="page hidden" id="page2">
+            <div class="main-container">
+                <div class="hero">
+                    <h1 class="hero-title portfolio-title" data-translate="portfolio-title">ПОРТФОЛИО</h1>
+                </div>
+
+                <div class="content-card">
+                    <section class="content-section">
+                        <div class="disclaimer">
+                            <p data-translate="age-disclaimer">⚠️ Мне 14 лет, поэтому могу допускать ошибки в работе. Но я учусь и становлюсь лучше каждый день!</p>
+                        </div>
+                        
+                        <div style="text-align: center; margin: 20px 0;">
+                            <a href="https://drive.google.com/drive/folders/1ZaxbAVUgaxJneJtZkOufN8bR2KfQuRBw" target="_blank" class="projects-btn">
+                                <span>📁</span>
+                                <span data-translate="view-projects">Посмотреть все мои проекты</span>
+                            </a>
+                        </div>
+                        
+                        <div class="order-section">
+                            <h2 data-translate="ready-orders">💼 Готов к заказам!</h2>
+                            <p data-translate="no-portfolio-desc" style="font-size: 1.1rem; margin-bottom: 25px;">
+                                🚀 У меня пока нет большого портфолио проектов, но я готов работать! 
+                                Цены будут низкими, качество высоким! 💪
+                            </p>
+                            <div class="order-grid">
+                                <div class="order-card">
+                                    <h4 data-translate="python-scripts">🐍 Python скрипты</h4>
+                                    <p data-translate="python-desc">Простые боты, автоматизация задач</p>
+                                    <p style="font-weight: bold; color: #00ff88;" data-translate="price-negotiable">Цена договорная</p>
+                                </div>
+                                <div class="order-card">
+                                    <h4 data-translate="video-editing-service">🎬 Видеомонтаж</h4>
+                                    <p data-translate="video-desc">Canva, CapCut, простые ролики</p>
+                                    <p style="font-weight: bold; color: #00ff88;" data-translate="price-negotiable">Цена договорная</p>
+                                </div>
+                                <div class="order-card">
+                                    <h4 data-translate="linux-help">🐧 Linux помощь</h4>
+                                    <p data-translate="linux-desc">Базовая настройка, консультации</p>
+                                    <p style="font-weight: bold; color: #00ff88;" data-translate="price-negotiable">Цена договорная</p>
+                                </div>
+                                <div class="order-card">
+                                    <h4 data-translate="web-dev">🌐 Веб-разработка</h4>
+                                    <p data-translate="web-desc">Простые сайты, HTML/CSS/JS</p>
+                                    <p style="font-weight: bold; color: #00ff88;" data-translate="price-negotiable">Цена договорная</p>
+                                </div>
+                                <div class="order-card">
+                                    <h4 data-translate="windows-help">💻 Windows помощь</h4>
+                                    <p data-translate="windows-desc">Оптимизация, очистка, настройка</p>
+                                    <p style="font-weight: bold; color: #00ff88;" data-translate="price-negotiable">Цена договорная</p>
+                                </div>
+                                <div class="order-card">
+                                    <h4 data-translate="ai-help">🤖 AI помощь</h4>
+                                    <p data-translate="ai-desc">Настройка ChatGPT, промпты</p>
+                                    <p style="font-weight: bold; color: #00ff88;" data-translate="price-negotiable">Цена договорная</p>
+                                </div>
+                            </div>
+                            <p data-translate="contact-order" style="margin-top: 25px; font-weight: bold; font-size: 1.2rem;">
+                                📞 Заказывайте! Пишите в любой из контактов ⬇️
+                            </p>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <h2 class="section-title" data-translate="achievements">🏆 Достижения</h2>
+                        <div class="projects-grid">
+                            <div class="project-card" style="background: rgba(0,255,136,0.1);">
+                                <h4 data-translate="linux-enthusiast">🐧 Linux Энтузиаст</h4>
+                                <p data-translate="linux-exp">2+ года опыта работы с Linux системами</p>
+                                <p style="font-size: 0.8rem; opacity: 0.8;" data-translate="linux-exp-detail">Zorin OS, AntiX, Ubuntu, базовое администрирование</p>
+                            </div>
+                            <div class="project-card" style="background: rgba(102,126,234,0.1);">
+                                <h4 data-translate="video-maker">🎬 Начинающий Видеомейкер</h4>
+                                <p data-translate="video-exp">Создал 5+ качественных видео</p>
+                                <p style="font-size: 0.8rem; opacity: 0.8;" data-translate="video-exp-detail">Делал давно и для друзей. Не сохранил</p>
+                            </div>
+                            <div class="project-card" style="background: rgba(255,170,0,0.1);">
+                                <h4 data-translate="ai-enthusiast">🤖 AI Энтузиаст</h4>
+                                <p data-translate="ai-exp">Активно использую современные AI инструменты</p>
+                                <p style="font-size: 0.8rem; opacity: 0.8;" data-translate="ai-exp-detail">ChatGPT, Claude, Gemini</p>
+                            </div>
+                            <div class="project-card" style="background: rgba(255,68,68,0.1);">
+                                <h4 data-translate="code-student">💻 Код Студент</h4>
+                                <p data-translate="code-exp">1500+ строк кода написано</p>
+                                <p style="font-size: 0.8rem; opacity: 0.8;" data-translate="code-exp-detail">Python, C++, JavaScript, HTML/CSS</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <h2 class="section-title" data-translate="contacts-title">Контакты</h2>
+                        <div class="contacts-grid">
+                            <div class="contact-card">
+                                <div class="contact-icon">📧</div>
+                                <h3>Email</h3>
+                                <a href="mailto:konserv1help@gmail.com">konserv1help@gmail.com</a>
+                            </div>
+                            <div class="contact-card">
+                                <div class="contact-icon">💬</div>
+                                <h3>Discord</h3>
+                                <a href="https://discord.com/users/sudo_0nigiri">sudo_0nigiri</a>
+                            </div>
+                            <div class="contact-card">
+                                <div class="contact-icon">🔫</div>
+                                <h3>Guns</h3>
+                                <a href="https://guns.lol/0nigiri">guns.lol/0nigiri</a>
+                            </div>
+                            <div class="contact-card">
+                                <div class="contact-icon">📷</div>
+                                <h3>Instagram</h3>
+                                <a href="https://www.instagram.com/sudo_0nigiri/">@sudo_0nigiri</a>
+                            </div>
+                            <div class="contact-card">
+                                <div class="contact-icon">🐙</div>
+                                <h3>GitHub</h3>  
+                                <a href="https://github.com/0nigiris">github.com/0nigiris</a>
+                            </div>
+                            <div class="contact-card">
+                                <div class="contact-icon">🎥</div>
+                                <h3>YouTube</h3>
+                                <a href="https://www.youtube.com/@Konserv1">@Konserv1</a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Навигация между страницами -->
+    <div class="page-navigation">
+        <div class="page-dot active" onclick="switchPage(0)"></div>
+        <div class="page-dot" onclick="switchPage(1)"></div>
+    </div>
+
+    <!-- Модальные окна -->
+    <div class="modal" id="gamesModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="hideModal('gamesModal')">×</button>
+            <h2 data-translate="mini-games">🎮 Мини-игры</h2>
+            <div class="game-buttons" id="gameMenu">
+                <button class="game-btn" onclick="startGame('snake')">🐍 Snake</button>
+                <button class="game-btn" onclick="startGame('tetris')">🧩 Tetris</button>
+                <button class="game-btn" onclick="startGame('2048')">🔢 2048</button>
+                <button class="game-btn" onclick="startGame('pong')">🏓 Pong</button>
+                <button class="game-btn" onclick="startGame('runner')">🚗 Speed Runner</button>
+                <button class="game-btn" onclick="startGame('asteroids')">⭐ Asteroids</button>
+                <button class="game-btn" onclick="hideModal('gamesModal')" data-translate="close">❌ Закрыть</button>
+            </div>
+            <div id="gameArea" class="hidden">
+                <div style="display: flex; gap: 20px; align-items: flex-start; justify-content: center; flex-wrap: wrap;">
+                    <canvas id="gameCanvas" class="game-canvas" width="400" height="400"></canvas>
+                    <div id="gameControls" class="hidden" style="
+                        background: var(--glass); 
+                        backdrop-filter: blur(10px);
+                        border: 1px solid var(--glass-border);
+                        padding: 20px; 
+                        border-radius: 12px; 
+                        min-width: 200px;
+                        max-width: 250px;
+                        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+                    ">
+                        <h4 style="color: var(--primary); margin-bottom: 15px; font-weight: 600;">🎮 Управление</h4>
+                        <div id="controlsContent" style="
+                            color: var(--text-light); 
+                            font-size: 14px; 
+                            line-height: 1.8;
+                            opacity: 0.9;
+                        "></div>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 15px;">
+                    <button class="game-btn" onclick="showGameMenu()" data-translate="back-menu">🔙 В меню</button>
+                    <button class="game-btn" onclick="restartGame()" data-translate="restart">🔄 Заново</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="toolsModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="hideModal('toolsModal')">×</button>
+            <h2 data-translate="useful-tools">🛠️ Полезные инструменты</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h3 data-translate="calc-title">🔢 Программистский калькулятор</h3>
+                    <input type="text" class="tool-input" id="calcInput" data-translate-placeholder="calc-placeholder" placeholder="Введите выражение">
+                    <button class="game-btn" onclick="calculate()">Вычислить</button>
+                    <div class="tool-output" id="calcOutput">Результат появится здесь</div>
+                </div>
+                <div class="tool-card">
+                    <h3 data-translate="pass-title">🔐 Генератор паролей</h3>
+                    <input type="number" class="tool-input" id="passLength" placeholder="Длина" value="12">
+                    <button class="game-btn" onclick="generatePassword()">Сгенерировать</button>
+                    <div class="tool-output" id="passOutput">Пароль появится здесь</div>
+                </div>
+                <div class="tool-card">
+                    <h3 data-translate="color-title">🎨 Цветовой конвертер</h3>
+                    <input type="text" class="tool-input" id="colorInput" placeholder="#FF5733">
+                    <button class="game-btn" onclick="convertColor()">Конвертировать</button>
+                    <div class="tool-output" id="colorOutput">RGB, HSL появятся здесь</div>
+                </div>
+                <div class="tool-card">
+                    <h3 data-translate="base64-title">📝 Base64 кодер</h3>
+                    <input type="text" class="tool-input" id="base64Input" placeholder="Текст для кодирования">
+                    <button class="game-btn" onclick="encodeBase64()">Кодировать</button>
+                    <button class="game-btn" onclick="decodeBase64()">Декодировать</button>
+                    <div class="tool-output" id="base64Output">Результат появится здесь</div>
+                </div>
+                <div class="tool-card">
+                    <h3 data-translate="url-title">🔗 Сокращение ссылок</h3>
+                    <input type="text" class="tool-input" id="urlInput" placeholder="https://example.com/very/long/url">
+                    <button class="game-btn" onclick="shortenUrl()">Сократить</button>
+                    <div class="tool-output" id="urlOutput">Короткая ссылка появится здесь</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Уведомления -->
+    <div class="notification" id="notification"></div>
+
+    <script>
+        /*
+        🔊 НАСТРОЙКА ЗВУКОВ - РЕАЛЬНЫЙ РАБОЧИЙ КОД:
+        Раскомментируй объект sounds и замени пути на свои файлы
+        
+        🎵 СПИСОК ЗВУКОВ ДЛЯ ДОБАВЛЕНИЯ:
+        
+        📂 ОСНОВНЫЕ ЗВУКИ:
+        - backgroundMusic: './bg_music.mp3' - Фоновая музыка (тихая, расслабляющая)
+        - buttonHover: './hover.mp3' - Наведение на интерактивные элементы
+        - buttonClick: './click.mp3' - Нажатие на кнопки
+        - pageTransition: './page_turn.mp3' - Переход между страницами портфолио
+        - notification: './notification.mp3' - Звук уведомлений
+        
+        🎮 ЗВУКИ ДЛЯ ИГР:
+        
+        🐍 ЗМЕЙКА:
+        - snakeEat: './snake_eat.mp3' - Змейка съела еду
+        - snakeGameOver: './snake_death.mp3' - Змейка врезалась/умерла
+        
+        🧩 ТЕТРИС:
+        - tetrisMove: './tetris_move.mp3' - Перемещение/поворот фигуры
+        - tetrisLine: './tetris_line.mp3' - Убрана линия
+        - tetrisRotate: './tetris_rotate.mp3' - Поворот фигуры
+        - tetrisGameOver: './tetris_gameover.mp3' - Конец игры
+        
+        🔢 2048:
+        - game2048merge: './2048_merge.mp3' - Соединение плиток
+        - game2048move: './2048_move.mp3' - Движение плиток
+        - game2048win: './2048_win.mp3' - Достижение 2048
+        
+        🏓 ПОНГ:
+        - pongHit: './pong_hit.mp3' - Отбивание мяча ракеткой
+        - pongGoal: './pong_goal.mp3' - Гол/очко
+        - pongBounce: './pong_bounce.mp3' - Отскок от стены
+        
+        🚗 ГОНКИ:
+        - carEngine: './car_engine.mp3' - Фоновый звук двигателя (зацикленный)
+        - carCrash: './car_crash.mp3' - Авария/столкновение
+        - carAccelerate: './car_accelerate.mp3' - Ускорение
+        
+        ⭐ АСТЕРОИДЫ:
+        - asteroidShoot: './asteroid_shoot.mp3' - Выстрел из корабля
+        - asteroidHit: './asteroid_hit.mp3' - Попадание в астероид
+        - asteroidEngine: './asteroid_engine.mp3' - Звук двигателя корабля
+        - asteroidDestroy: './asteroid_destroy.mp3' - Уничтожение корабля
+        
+        🛠️ ИНСТРУМЕНТЫ:
+        - toolCalculate: './tool_calc.mp3' - Вычисление в калькуляторе
+        - toolGenerate: './tool_generate.mp3' - Генерация пароля/данных
+        - toolConvert: './tool_convert.mp3' - Конвертация (цвета, base64)
+        - toolError: './tool_error.mp3' - Ошибка в инструменте
+        */
+        
+        // 🚀 УМНАЯ ЗВУКОВАЯ СИСТЕМА - РАБОТАЕТ И ЛОКАЛЬНО И НА СЕРВЕРЕ
+        
+        let soundsCache = {}; // Кэш для загруженных звуков
+        let soundsInitialized = false;
+        let soundsEnabled = false; // Флаг доступности звуков
+        let audioContext = null;
+        
+        // Проверка доступности звуков (работает ли через HTTP?)
+        function checkSoundsAvailability() {
+            // Если запускаем через file:// - звуки недоступны из-за CORS
+            if (window.location.protocol === 'file:') {
+                soundsEnabled = false;
+                console.log('🔇 Звуки отключены: запуск через file:// протокол');
+                return false;
+            }
+            
+            // Если через HTTP/HTTPS - звуки доступны
+            soundsEnabled = true;
+            console.log('🔊 Звуки доступны: запуск через веб-сервер');
+            return true;
+        }
+        
+        // Список звуков для загрузки - ГОТОВЫЕ ПУТИ К ФАЙЛАМ
+        const soundFiles = {
+            // 📂 ОСНОВНЫЕ ЗВУКИ
+            backgroundMusic: './bg_music.mp3',        // Фоновая музыка (тихая, расслабляющая)
+            buttonHover: './hover.mp3',               // Наведение на интерактивные элементы  
+            buttonClick: './click.mp3',               // Нажатие на кнопки
+            pageTransition: './page_turn.mp3',        // Переход между страницами
+            notification: './notification.mp3',       // Звук уведомлений
+            
+            // 🐍 ЗМЕЙКА
+            snakeEat: './snake_eat.mp3',              // Змейка съела еду
+            snakeGameOver: './snake_death.mp3',       // Змейка врезалась/умерла
+            
+            // 🧩 ТЕТРИС  
+            tetrisMove: './tetris_move.mp3',          // Перемещение фигуры
+            tetrisLine: './tetris_line.mp3',          // Убрана линия
+            tetrisRotate: './tetris_rotate.mp3',      // Поворот фигуры
+            tetrisGameOver: './tetris_gameover.mp3',  // Конец игры
+            
+            // 🔢 2048
+            game2048merge: './2048_merge.mp3',        // Соединение плиток
+            game2048move: './2048_move.mp3',          // Движение плиток  
+            game2048win: './2048_win.mp3',            // Достижение 2048
+            
+            // 🏓 ПОНГ
+            pongHit: './pong_hit.mp3',                // Отбивание мяча ракеткой
+            pongGoal: './pong_goal.mp3',              // Гол/очко
+            pongBounce: './pong_bounce.mp3',          // Отскок от стены
+            
+            // 🚗 ГОНКИ
+            carEngine: './car_engine.mp3',            // Фоновый звук двигателя
+            carCrash: './car_crash.mp3',              // Авария/столкновение
+            carAccelerate: './car_accelerate.mp3',    // Ускорение
+            
+            // ⭐ АСТЕРОИДЫ
+            asteroidShoot: './asteroid_shoot.mp3',    // Выстрел из корабля
+            asteroidHit: './asteroid_hit.mp3',        // Попадание в астероид
+            asteroidEngine: './asteroid_engine.mp3',  // Звук двигателя корабля
+            asteroidDestroy: './asteroid_destroy.mp3', // Уничтожение корабля
+            
+            // 🛠️ ИНСТРУМЕНТЫ
+            toolCalculate: './tool_calc.mp3',         // Вычисление в калькуляторе
+            toolGenerate: './tool_generate.mp3',      // Генерация пароля/данных
+            toolConvert: './tool_convert.mp3',        // Конвертация цветов/base64
+            toolError: './tool_error.mp3'             // Ошибка в инструменте
+        };
+        
+        // 🎵 ИНИЦИАЛИЗАЦИЯ АУДИО
+        function initAudio() {
+            if (!soundsEnabled) return false;
+            
+            try {
+                if (!audioContext) {
+                    audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                }
+                if (audioContext.state === 'suspended') {
+                    audioContext.resume();
+                }
+                soundsInitialized = true;
+                return true;
+            } catch (e) {
+                soundsEnabled = false;
+                return false;
+            }
+        }
+        
+        // 🔇 УМНАЯ ЗАГРУЗКА ЗВУКА
+        function loadSound(soundName) {
+            if (!soundsEnabled) return null;
+            
+            if (soundsCache[soundName]) {
+                return soundsCache[soundName]; // Уже загружен
+            }
+            
+            const filePath = soundFiles[soundName];
+            if (!filePath) {
+                return null; // Звук не определен
+            }
+            
+            try {
+                const audio = new Audio();
+                audio.volume = 0.4;
+                audio.preload = 'none'; // Не загружаем сразу
+                audio.src = filePath;
+                
+                // Обработка ошибок загрузки
+                audio.onerror = () => {
+                    soundsCache[soundName] = null;
+                };
+                
+                soundsCache[soundName] = audio;
+                return audio;
+            } catch (error) {
+                soundsCache[soundName] = null;
+                return null;
+            }
+        }
+        
+        // 🔊 УМНАЯ ФУНКЦИЯ ВОСПРОИЗВЕДЕНИЯ
+        function playSound(soundName, allowOverlap = false) {
+            // Если звуки отключены - просто выходим
+            if (!soundsEnabled) return;
+            
+            try {
+                // Инициализация при первом воспроизведении
+                if (!soundsInitialized) {
+                    if (!initAudio()) return;
+                }
+                
+                const audio = loadSound(soundName);
+                if (!audio) return;
+                
+                // Воспроизведение
+                if (allowOverlap) {
+                    // Клонируем для наложения
+                    const clone = audio.cloneNode();
+                    clone.volume = audio.volume;
+                    clone.currentTime = 0;
+                    clone.play().catch(() => {});
+                } else {
+                    // Обычное воспроизведение
+                    audio.currentTime = 0;
+                    audio.play().catch(() => {});
+                }
+                
+            } catch (error) {
+                // Тихо игнорируем ошибки
+            }
+        }
+        
+        // 🎵 ПРЕДЗАГРУЗКА ОСНОВНЫХ ЗВУКОВ
+        function preloadSounds() {
+            if (!soundsEnabled) return;
+            
+            const prioritySounds = ['buttonHover', 'buttonClick', 'notification'];
+            prioritySounds.forEach(soundName => {
+                loadSound(soundName);
+            });
+        }
+        
+        let currentLanguage = 'ru';
+        let isDarkTheme = true;
+        let currentGame = null;
+        let gameState = {};
+        let matrixAnimationId = null;
+        let currentPage = 0;
+        let secretKeyPressed = false;
+
+        const translations = {
+            ru: {
+                subtitle: 'Будущий миллионер | 14 лет | Создатель игр и утилит',
+                about: `Привет! Меня зовут Александр, мне 14 лет, и я амбициозный предприниматель в сфере технологий. 
+                Активно изучаю разработку игр, утилит и Python с помощью современных AI инструментов для максимальной эффективности обучения. 
+                Использую Linux (Zorin OS и AntiX) как основную систему и имею глубокие знания системного администрирования.
+                <br><br>
+                В видеомонтаже достиг профессионального уровня - отлично владею Canva и CapCut, создаю качественный контент. 
+                Но сейчас полностью сосредоточен на программировании и создании интерактивных проектов для достижения своих амбициозных целей.
+                <br><br>
+                🎯 <strong>Главная миссия:</strong> Стать Senior Создатель игр и утилитом и создать 3 источника пассивного дохода для достижения финансовой независимости! 
+                💫 Планирую развиваться в сфере геймдева, утилит и креативной разработки, создать несколько технологических стартапов и переехать в Монако до 25 лет.
+                <br><br>
+                🚀 Я не просто изучаю технологии - я создаю будущее! Использую все современные инструменты для быстрого обучения и верю, что смогу изменить мир через технологии!`,
+                'tag-gamedev': '🎮 Разработка игр',
+                'tag-utilities': '🧩 Утилиты и скрипты',
+                'tag-community': '🌐 Комьюнити-подход',
+                'tag-montage': '🎬 Монтаж (CapCut / DaVinci)',
+                'tag-devops': '⚙️ Создатель игр и утилит',
+                'tag-ai': '🤖 AI/ML эксперт',
+                'tag-python': '🐍 Python разработка',
+                'tag-video': '🎬 Профи видеомонтаж',
+                'tag-linux': '🐧 Linux гуру',
+                'tag-millionaire': '💰 Будущий миллионер',
+                'tag-startup': '🚀 Стартап основатель',
+                'theme': '🌙 Тема',
+                'games': '🎮 Игры',
+                'tools': '🛠️ Инструменты',
+                'days': 'Дней изучения',
+                'languages': 'Языков/инструментов',
+                'lines': 'Строк кода',
+                'problems': 'Проблем решено',
+                'about-title': 'Обо мне',
+                'skills-title': 'Мои навыки',
+                'contacts-title': 'Контакты',
+                'projects-title': '📂 Мои проекты',
+                'project1-title': '🐍 Python Автоматизация',
+                'project1-desc': 'Скрипт для автоматизации рутинных задач',
+                'project2-title': '🐧 Linux Конфиги',
+                'project2-desc': 'Коллекция настроек для Linux систем',
+                'project3-title': '🎬 Видео контент',
+                'project3-desc': 'Качественные ролики для соцсетей',
+                'project4-title': '🌐 Это портфолио',
+                'project4-desc': 'Интерактивное портфолио с играми',
+                'programming': '💻 Программирование',
+                'video-editing': '🎬 Видеомонтаж',
+                'ai-understanding': 'AI понимание',
+                'no-money': '0% (потому что денег нет)',
+                'portfolio-title': 'ПОРТФОЛИО',
+                'age-disclaimer': '⚠️ Мне 14 лет, поэтому могу допускать ошибки в работе. Но я учусь и становлюсь лучше каждый день!',
+                'view-projects': 'Посмотреть все мои проекты',
+                'ready-orders': '💼 Готов к заказам!',
+                'no-portfolio-desc': '🚀 У меня пока нет большого портфолио проектов, но я готов работать! Цены будут низкими, качество высоким! 💪',
+                'python-scripts': '🐍 Python скрипты',
+                'python-desc': 'Простые боты, автоматизация задач',
+                'video-editing-service': '🎬 Видеомонтаж',
+                'video-desc': 'Canva, CapCut, простые ролики',
+                'linux-help': '🐧 Linux помощь',
+                'linux-desc': 'Базовая настройка, консультации',
+                'web-dev': '🌐 Веб-разработка',
+                'web-desc': 'Простые сайты, HTML/CSS/JS',
+                'windows-help': '💻 Windows помощь',
+                'windows-desc': 'Оптимизация, очистка, настройка',
+                'ai-help': '🤖 AI помощь',
+                'ai-desc': 'Настройка ChatGPT, промпты',
+                'contact-order': '📞 Заказывайте! Пишите в любой из контактов ⬇️',
+                'achievements': '🏆 Достижения',
+                'linux-enthusiast': '🐧 Linux Энтузиаст',
+                'linux-exp': '2+ года опыта работы с Linux системами',
+                'linux-exp-detail': 'Zorin OS, AntiX, Ubuntu, базовое администрирование',
+                'video-maker': '🎬 Начинающий Видеомейкер',
+                'video-exp': 'Создал 5+ качественных видео',
+                'video-exp-detail': 'Делал давно и для друзей. Не сохранил',
+                'ai-enthusiast': '🤖 AI Энтузиаст',
+                'ai-exp': 'Активно использую современные AI инструменты',
+                'ai-exp-detail': 'ChatGPT, Claude, Gemini',
+                'code-student': '💻 Код Студент',
+                'code-exp': '1500+ строк кода написано',
+                'code-exp-detail': 'Python, C++, JavaScript, HTML/CSS',
+                'mini-games': '🎮 Мини-игры',
+                'close': '❌ Закрыть',
+                'back-menu': '🔙 В меню',
+                'restart': '🔄 Заново',
+                'useful-tools': '🛠️ Полезные инструменты',
+                'calc-title': '🔢 Программистский калькулятор',
+                'calculate': 'Вычислить',
+                'pass-title': '🔐 Генератор паролей',
+                'generate': 'Сгенерировать',
+                'color-title': '🎨 Цветовой конвертер',
+                'convert': 'Конвертировать',
+                'base64-title': '📝 Base64 кодер',
+                'encode': 'Кодировать',
+                'decode': 'Декодировать',
+                'url-title': '🔗 Сокращение ссылок',
+                'shorten': 'Сократить',
+                'price-negotiable': 'Цена договорная',
+                'f12-blocked': '🚫 F12 заблокирован!',
+                'f12-unlocked': '🔓 Секретный доступ разрешён!'
+            },
+            en: {
+                subtitle: 'Future Millionaire | 14 years old | Game & Utility Creator',
+                about: `Hi! My name is Alexander, I'm 14 years old, and I'm an ambitious entrepreneur in the technology field. 
+                I actively study game development, utilities and Python using modern AI tools for maximum learning efficiency. 
+                I use Linux (Zorin OS and AntiX) as my main system and have deep knowledge of system administration.
+                <br><br>
+                In video editing, I've reached a professional level - I'm excellent with Canva and CapCut, creating quality content. 
+                But now I'm fully focused on programming and creating interactive projects to achieve my ambitious goals.
+                <br><br>
+                🎯 <strong>Main Mission:</strong> Become a Senior Game & Utility Creator and create 3 passive income sources to achieve financial independence! 
+                💫 I plan to develop in game development, utilities and creative development, create several tech startups and move to Monaco by age 25.
+                <br><br>
+                🚀 I don't just study technologies - I create the future! I use all modern tools for rapid learning and believe I can change the world through technology!`,
+                'tag-gamedev': '🎮 Game Development',
+                'tag-utilities': '🧩 Utilities & Scripts',
+                'tag-community': '🌐 Community Approach',
+                'tag-montage': '🎬 Editing (CapCut / DaVinci)',
+                'tag-devops': '⚙️ Game & Utility Creator',
+                'tag-ai': '🤖 AI/ML Expert',
+                'tag-python': '🐍 Python Development',
+                'tag-video': '🎬 Pro Video Editor',
+                'tag-linux': '🐧 Linux Guru',
+                'tag-millionaire': '💰 Future Millionaire',
+                'tag-startup': '🚀 Startup Founder',
+                'theme': '🌙 Theme',
+                'games': '🎮 Games',
+                'tools': '🛠️ Tools',
+                'days': 'Days of studying',
+                'languages': 'Languages/tools',
+                'lines': 'Lines of code',
+                'problems': 'Problems solved',
+                'about-title': 'About me',
+                'skills-title': 'My skills',
+                'contacts-title': 'Contacts',
+                'projects-title': '📂 My Projects',
+                'project1-title': '🐍 Python Automation',
+                'project1-desc': 'Script for automating routine tasks',
+                'project2-title': '🐧 Linux Configs',
+                'project2-desc': 'Collection of settings for Linux systems',
+                'project3-title': '🎬 Video Content',
+                'project3-desc': 'Quality videos for social media',
+                'project4-title': '🌐 This Portfolio',
+                'project4-desc': 'Interactive portfolio with games',
+                'programming': '💻 Programming',
+                'video-editing': '🎬 Video Editing',
+                'ai-understanding': 'AI Understanding',
+                'no-money': '0% (because no money)',
+                'portfolio-title': 'PORTFOLIO',
+                'age-disclaimer': '⚠️ I\'m 14 years old, so I may make mistakes in my work. But I\'m learning and getting better every day!',
+                'view-projects': 'View all my projects',
+                'ready-orders': '💼 Ready for Orders!',
+                'no-portfolio-desc': '🚀 I don\'t have a big portfolio yet, but I\'m ready to work! Low prices, high quality! 💪',
+                'python-scripts': '🐍 Python Scripts',
+                'python-desc': 'Simple bots, task automation',
+                'video-editing-service': '🎬 Video Editing',
+                'video-desc': 'Canva, CapCut, simple videos',
+                'linux-help': '🐧 Linux Help',
+                'linux-desc': 'Basic setup, consultations',
+                'web-dev': '🌐 Web Development',
+                'web-desc': 'Simple websites, HTML/CSS/JS',
+                'windows-help': '💻 Windows Help',
+                'windows-desc': 'Optimization, cleanup, setup',
+                'ai-help': '🤖 AI Help',
+                'ai-desc': 'ChatGPT setup, prompts',
+                'contact-order': '📞 Place orders! Contact me below ⬇️',
+                'achievements': '🏆 Achievements',
+                'linux-enthusiast': '🐧 Linux Enthusiast',
+                'linux-exp': '2+ years of Linux systems experience',
+                'linux-exp-detail': 'Zorin OS, AntiX, Ubuntu, basic administration',
+                'video-maker': '🎬 Aspiring Video Maker',
+                'video-exp': 'Created 5+ quality videos',
+                'video-exp-detail': 'Made long ago for friends. Didn\'t save them',
+                'ai-enthusiast': '🤖 AI Enthusiast',
+                'ai-exp': 'Actively using modern AI tools',
+                'ai-exp-detail': 'ChatGPT, Claude, Gemini',
+                'code-student': '💻 Code Student',
+                'code-exp': '1500+ lines of code written',
+                'code-exp-detail': 'Python, C++, JavaScript, HTML/CSS',
+                'mini-games': '🎮 Mini-games',
+                'close': '❌ Close',
+                'back-menu': '🔙 Back to menu',
+                'restart': '🔄 Restart',
+                'useful-tools': '🛠️ Useful Tools',
+                'calc-title': '🔢 Programming Calculator',
+                'calculate': 'Calculate',
+                'pass-title': '🔐 Password Generator',
+                'generate': 'Generate',
+                'color-title': '🎨 Color Converter',
+                'convert': 'Convert',
+                'base64-title': '📝 Base64 Encoder',
+                'encode': 'Encode',
+                'decode': 'Decode',
+                'url-title': '🔗 URL Shortener',
+                'shorten': 'Shorten',
+                'price-negotiable': 'Price negotiable',
+                'f12-blocked': '🚫 F12 blocked!',
+                'f12-unlocked': '🔓 Secret access granted!'
+            },
+            es: {
+                subtitle: 'Futuro Millonario | 14 años | Creador de Juegos y Utilidades',
+                about: `¡Hola! Mi nombre es Alexander, tengo 14 años y soy un emprendedor ambicioso en el campo tecnológico. 
+                Estudio activamente desarrollo de juegos, utilidades y Python usando herramientas de IA modernas para máxima eficiencia de aprendizaje. 
+                Uso Linux (Zorin OS y AntiX) como mi sistema principal y tengo conocimientos profundos de administración de sistemas.
+                <br><br>
+                En edición de video, he alcanzado un nivel profesional - soy excelente con Canva y CapCut, creando contenido de calidad. 
+                Pero ahora estoy completamente enfocado en programación y creando proyectos interactivos para lograr mis objetivos ambiciosos.
+                <br><br>
+                🎯 <strong>Misión Principal:</strong> ¡Convertirme en Senior Creador de Juegos y Utilidades y crear 3 fuentes de ingresos pasivos para lograr independencia financiera! 
+                💫 Planeo desarrollarme en desarrollo de juegos, utilidades y desarrollo creativo, crear varios startups tecnológicos y mudarme a Mónaco antes de los 25.
+                <br><br>
+                🚀 ¡No solo estudio tecnologías - creo el futuro! Uso todas las herramientas modernas para aprendizaje rápido y creo que puedo cambiar el mundo a través de la tecnología!`,
+                'tag-gamedev': '🎮 Desarrollo de Juegos',
+                'tag-utilities': '🧩 Utilidades y Scripts',
+                'tag-community': '🌐 Enfoque Comunitario',
+                'tag-montage': '🎬 Edición (CapCut / DaVinci)',
+                'tag-devops': '⚙️ Creador de Juegos y Utilidades',
+                'tag-ai': '🤖 Experto AI/ML',
+                'tag-python': '🐍 Desarrollador Python',
+                'tag-video': '🎬 Editor de Video Pro',
+                'tag-linux': '🐧 Gurú Linux',
+                'tag-millionaire': '💰 Futuro Millonario',
+                'tag-startup': '🚀 Fundador de Startups',
+                'theme': '🌙 Tema',
+                'games': '🎮 Juegos',
+                'tools': '🛠️ Herramientas',
+                'days': 'Días de estudio',
+                'languages': 'Idiomas/herramientas',
+                'lines': 'Líneas de código',
+                'problems': 'Problemas resueltos',
+                'about-title': 'Sobre mí',
+                'skills-title': 'Mis habilidades',
+                'contacts-title': 'Contactos',
+                'projects-title': '📂 Mis Proyectos',
+                'project1-title': '🐍 Automatización Python',
+                'project1-desc': 'Script para automatizar tareas rutinarias',
+                'project2-title': '🐧 Configuraciones Linux',
+                'project2-desc': 'Colección de configuraciones para sistemas Linux',
+                'project3-title': '🎬 Contenido de Video',
+                'project3-desc': 'Videos de calidad para redes sociales',
+                'project4-title': '🌐 Este Portafolio',
+                'project4-desc': 'Portafolio interactivo con juegos',
+                'programming': '💻 Programación',
+                'video-editing': '🎬 Edición de Video',
+                'ai-understanding': 'Comprensión de IA',
+                'no-money': '0% (porque no hay dinero)',
+                'portfolio-title': 'PORTAFOLIO',
+                'age-disclaimer': '⚠️ Tengo 14 años, así que puedo cometer errores en mi trabajo. ¡Pero estoy aprendiendo y mejorando cada día!',
+                'view-projects': 'Ver todos mis proyectos',
+                'ready-orders': '💼 ¡Listo para Pedidos!',
+                'no-portfolio-desc': '🚀 ¡Aún no tengo un gran portafolio, pero estoy listo para trabajar! ¡Precios bajos, calidad alta! 💪',
+                'python-scripts': '🐍 Scripts Python',
+                'python-desc': 'Bots simples, automatización de tareas',
+                'video-editing-service': '🎬 Edición de Video',
+                'video-desc': 'Canva, CapCut, videos simples',
+                'linux-help': '🐧 Ayuda Linux',
+                'linux-desc': 'Configuración básica, consultas',
+                'web-dev': '🌐 Desarrollo Web',
+                'web-desc': 'Sitios simples, HTML/CSS/JS',
+                'windows-help': '💻 Ayuda Windows',
+                'windows-desc': 'Optimización, limpieza, configuración',
+                'ai-help': '🤖 Ayuda con IA',
+                'ai-desc': 'Configurar ChatGPT, prompts',
+                'contact-order': '📞 ¡Haz pedidos! Contáctame abajo ⬇️',
+                'achievements': '🏆 Logros',
+                'linux-enthusiast': '🐧 Entusiasta Linux',
+                'linux-exp': '2+ años de experiencia en sistemas Linux',
+                'linux-exp-detail': 'Zorin OS, AntiX, Ubuntu, administración básica',
+                'video-maker': '🎬 Aspirante a Videomaker',
+                'video-exp': 'Creé 5+ videos de calidad',
+                'video-exp-detail': 'Los hice hace mucho para amigos. No los guardé',
+                'ai-enthusiast': '🤖 Entusiasta de IA',
+                'ai-exp': 'Uso activo de herramientas de IA modernas',
+                'ai-exp-detail': 'ChatGPT, Claude, Gemini',
+                'code-student': '💻 Estudiante de Código',
+                'code-exp': '1500+ líneas de código escritas',
+                'code-exp-detail': 'Python, C++, JavaScript, HTML/CSS',
+                'mini-games': '🎮 Mini-juegos',
+                'close': '❌ Cerrar',
+                'back-menu': '🔙 Volver al menú',
+                'restart': '🔄 Reiniciar',
+                'useful-tools': '🛠️ Herramientas Útiles',
+                'calc-title': '🔢 Calculadora de Programación',
+                'calculate': 'Calcular',
+                'pass-title': '🔐 Generador de Contraseñas',
+                'generate': 'Generar',
+                'color-title': '🎨 Convertidor de Colores',
+                'convert': 'Convertir',
+                'base64-title': '📝 Codificador Base64',
+                'encode': 'Codificar',
+                'decode': 'Decodificar',
+                'url-title': '🔗 Acortador de URLs',
+                'shorten': 'Acortar',
+                'price-negotiable': 'Precio negociable',
+                'f12-blocked': '🚫 ¡F12 bloqueado!',
+                'f12-unlocked': '🔓 ¡Acceso secreto concedido!'
+            }
+        };
+
+        function switchPage(pageIndex) {
+            const pages = document.querySelectorAll('.page');
+            const dots = document.querySelectorAll('.page-dot');
+            
+            if (pageIndex === currentPage) return;
+            
+            // 🔊 ЗВУК ПЕРЕХОДА СТРАНИЦЫ
+            playSound('pageTransition');
+            
+            const currentPageEl = pages[currentPage];
+            const nextPageEl = pages[pageIndex];
+            
+            // Определяем направление анимации
+            const direction = pageIndex > currentPage ? 'right' : 'left';
+            
+            // Анимация выхода текущей страницы
+            currentPageEl.classList.add(`slide-out-${direction}`);
+            
+            // Подготавливаем новую страницу
+            nextPageEl.classList.remove('hidden');
+            nextPageEl.classList.add(`slide-in-${direction === 'right' ? 'right' : 'left'}`);
+            
+            setTimeout(() => {
+                // Показываем новую страницу
+                nextPageEl.classList.remove(`slide-in-${direction === 'right' ? 'right' : 'left'}`);
+                nextPageEl.classList.add('active');
+                
+                // Скрываем старую страницу
+                currentPageEl.classList.remove(`slide-out-${direction}`);
+                currentPageEl.classList.add('hidden');
+                currentPageEl.classList.remove('active');
+            }, 50);
+            
+            // Обновляем навигационные точки
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === pageIndex);
+            });
+            
+            currentPage = pageIndex;
+            
+            // Прокручиваем наверх
+            setTimeout(() => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }, 10);
+        }
+
+        // 🚀 ПРИНУДИТЕЛЬНОЕ УПРАВЛЕНИЕ ТЕМАМИ
+        function toggleTheme() {
+            const html = document.documentElement;
+            const btn = document.getElementById('themeBtn');
+            
+            if (isDarkTheme) {
+                // ПРИНУДИТЕЛЬНО УСТАНАВЛИВАЕМ СВЕТЛУЮ ТЕМУ
+                html.setAttribute('data-theme', 'light');
+                html.style.colorScheme = 'light';
+                document.body.style.backgroundColor = '#ffffff';
+                document.body.style.color = '#1a1a1a';
+                
+                btn.innerHTML = currentLanguage === 'ru' ? '☀️ Тема' : currentLanguage === 'en' ? '☀️ Theme' : '☀️ Tema';
+                showNotification(currentLanguage === 'ru' ? '☀️ Светлая тема!' : currentLanguage === 'en' ? '☀️ Light theme!' : '☀️ Tema claro!', 'success');
+                isDarkTheme = false;
+            } else {
+                // ПРИНУДИТЕЛЬНО УСТАНАВЛИВАЕМ ТЁМНУЮ ТЕМУ
+                html.setAttribute('data-theme', 'dark');
+                html.style.colorScheme = 'dark';
+                document.body.style.backgroundColor = '#0a0a0a';
+                document.body.style.color = '#ffffff';
+                
+                btn.innerHTML = currentLanguage === 'ru' ? '🌙 Тема' : currentLanguage === 'en' ? '🌙 Theme' : '🌙 Tema';
+                showNotification(currentLanguage === 'ru' ? '🌙 Тёмная тема!' : currentLanguage === 'en' ? '🌙 Dark theme!' : '🌙 Tema oscuro!', 'success');
+                isDarkTheme = true;
+            }
+        }
+
+        function setLanguage(lang) {
+            currentLanguage = lang;
+            
+            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById('lang' + lang.charAt(0).toUpperCase() + lang.slice(1)).classList.add('active');
+            
+            if (translations[lang]) {
+                document.getElementById('heroSubtitle').innerHTML = translations[lang].subtitle;
+                document.getElementById('aboutText').innerHTML = translations[lang].about;
+                
+                // Переводим все элементы с data-translate
+                document.querySelectorAll('[data-translate]').forEach(el => {
+                    const key = el.getAttribute('data-translate');
+                    if (translations[lang][key]) {
+                        if (el.tagName === 'INPUT') {
+                            el.placeholder = translations[lang][key];
+                        } else {
+                            el.textContent = translations[lang][key];
+                        }
+                    }
+                });
+
+                // Переводим placeholder'ы
+                document.querySelectorAll('[data-translate-placeholder]').forEach(el => {
+                    const key = el.getAttribute('data-translate-placeholder');
+                    if (translations[lang][key]) {
+                        el.placeholder = translations[lang][key];
+                    }
+                });
+
+                // Обновляем кнопки тем
+                const themeBtn = document.getElementById('themeBtn');
+                if (isDarkTheme) {
+                    themeBtn.innerHTML = translations[lang].theme || '🌙 Тема';
+                } else {
+                    themeBtn.innerHTML = lang === 'ru' ? '☀️ Тема' : lang === 'en' ? '☀️ Theme' : '☀️ Tema';
+                }
+            }
+            
+            const names = {ru: 'Русский', en: 'English', es: 'Español'};
+            showNotification(`🌍 ${names[lang]}`, 'success');
+        }
+
+        function showModal(modalId) {
+            document.getElementById(modalId).classList.add('visible');
+        }
+
+        function hideModal(modalId) {
+            document.getElementById(modalId).classList.remove('visible');
+        }
+
+        function showNotification(text, type = 'success') {
+            // 🔊 ЗВУК УВЕДОМЛЕНИЯ
+            playSound('notification');
+            
+            const notification = document.getElementById('notification');
+            notification.textContent = text;
+            notification.className = `notification ${type} show`;
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+
+        // 🔥 ИСПРАВЛЕННАЯ МАТРИЦА - ЯРКАЯ И ВИДИМАЯ
+        function startMatrixBackground() {
+            const canvas = document.getElementById('matrixCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            function resizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            
+            resizeCanvas();
+            
+            const chars = 'АЛЕКСАНДР0123456789АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ@#$%^&*()';
+            const charArray = chars.split('');
+            const fontSize = 16;
+            let columns = Math.floor(canvas.width / fontSize);
+            let drops = [];
+            
+            function initDrops() {
+                columns = Math.floor(canvas.width / fontSize);
+                drops = [];
+                for (let x = 0; x < columns; x++) {
+                    drops[x] = Math.random() * -100;
+                }
+            }
+            
+            initDrops();
+            
+            function drawMatrix() {
+                if (!gameState || gameState.matrixStopped) return;
+                
+                // 🔥 УЛУЧШЕННЫЙ ФОН - МЕНЬШЕ ЗАТЕМНЕНИЕ
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.02)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                
+                // 🔥 ЯРКИЕ ЦВЕТА ДЛЯ ОБЕИХ ТЕМ
+                const isLightTheme = document.documentElement.getAttribute('data-theme') === 'light';
+                if (isLightTheme) {
+                    // Для светлой темы - тёмно-зелёный
+                    ctx.fillStyle = '#00aa00';
+                } else {
+                    // Для тёмной темы - ярко-зелёный
+                    ctx.fillStyle = '#00ff41';
+                }
+                
+                ctx.font = fontSize + 'px monospace';
+                
+                for (let i = 0; i < drops.length; i++) {
+                    const text = charArray[Math.floor(Math.random() * charArray.length)];
+                    const x = i * fontSize;
+                    const y = drops[i] * fontSize;
+                    
+                    // 🔥 ГРАДИЕНТ ДЛЯ КРАСОТЫ
+                    const gradient = ctx.createLinearGradient(0, y - 50, 0, y + 50);
+                    if (isLightTheme) {
+                        gradient.addColorStop(0, 'rgba(0, 170, 0, 0.1)');
+                        gradient.addColorStop(0.5, '#00aa00');
+                        gradient.addColorStop(1, 'rgba(0, 170, 0, 0.3)');
+                    } else {
+                        gradient.addColorStop(0, 'rgba(0, 255, 65, 0.1)');
+                        gradient.addColorStop(0.5, '#00ff41');
+                        gradient.addColorStop(1, 'rgba(0, 255, 65, 0.3)');
+                    }
+                    ctx.fillStyle = gradient;
+                    
+                    ctx.fillText(text, x, y);
+                    
+                    if (y > canvas.height && Math.random() > 0.975) {
+                        drops[i] = 0;
+                    }
+                    
+                    drops[i] += 0.5;
+                }
+                
+                setTimeout(() => {
+                    matrixAnimationId = requestAnimationFrame(drawMatrix);
+                }, 120);
+            }
+            
+            // Обработчик изменения размера окна
+            function handleResize() {
+                if (matrixAnimationId) {
+                    cancelAnimationFrame(matrixAnimationId);
+                }
+                resizeCanvas();
+                initDrops();
+                setTimeout(() => {
+                    drawMatrix();
+                }, 100);
+            }
+            
+            window.addEventListener('resize', handleResize);
+            
+            // Сохраняем ссылку на обработчик для очистки
+            if (!window.matrixCleanup) {
+                window.matrixCleanup = [];
+            }
+            window.matrixCleanup.push(() => {
+                window.removeEventListener('resize', handleResize);
+                if (matrixAnimationId) {
+                    cancelAnimationFrame(matrixAnimationId);
+                }
+            });
+            
+            drawMatrix();
+        }
+
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                let current = 0;
+                const increment = target / 50;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        counter.textContent = target;
+                        clearInterval(timer);
+                    } else {
+                        counter.textContent = Math.floor(current);
+                    }
+                }, 50);
+            });
+        }
+
+        function animateSkills() {
+            const skills = document.querySelectorAll('.skill-progress');
+            skills.forEach(skill => {
+                const width = skill.getAttribute('data-width');
+                setTimeout(() => {
+                    skill.style.width = width + '%';
+                }, 500);
+            });
+        }
+
+        function startGame(game) {
+            currentGame = game;
+            document.getElementById('gameMenu').classList.add('hidden');
+            document.getElementById('gameArea').classList.remove('hidden');
+            
+            const canvas = document.getElementById('gameCanvas');
+            const ctx = canvas.getContext('2d');
+            const controlsDiv = document.getElementById('gameControls');
+            const controlsContent = document.getElementById('controlsContent');
+            
+            // ПОЛНАЯ ОЧИСТКА ПРЕДЫДУЩЕЙ ИГРЫ
+            if (gameState.cleanup) {
+                gameState.cleanup();
+            }
+            if (gameState.running) {
+                gameState.running = false;
+            }
+            
+            // Сброс gameState
+            gameState = { running: false };
+            
+            // Настройка управления для каждой игры
+            const gameControls = {
+                snake: `
+                    <div>🐍 <strong>Змейка</strong></div>
+                    <div>⬆️ Вверх</div>
+                    <div>⬇️ Вниз</div>
+                    <div>⬅️ Влево</div>
+                    <div>➡️ Вправо</div>
+                `,
+                tetris: `
+                    <div>🧩 <strong>Тетрис</strong></div>
+                    <div>⬅️ Влево</div>
+                    <div>➡️ Вправо</div>
+                    <div>⬇️ Ускорить падение</div>
+                    <div>⬆️ Поворот фигуры</div>
+                `,
+                '2048': `
+                    <div>🔢 <strong>2048</strong></div>
+                    <div>⬆️ Вверх</div>
+                    <div>⬇️ Вниз</div>
+                    <div>⬅️ Влево</div>
+                    <div>➡️ Вправо</div>
+                `,
+                pong: `
+                    <div>🏓 <strong>Понг</strong></div>
+                    <div>⬆️ Ракетка вверх</div>
+                    <div>⬇️ Ракетка вниз</div>
+                    <div>🤖 ИИ играет справа</div>
+                `,
+                runner: `
+                    <div>🚗 <strong>Гонки</strong></div>
+                    <div>⬅️ Влево</div>
+                    <div>➡️ Вправо</div>
+                    <div>🚧 Уворачивайся от препятствий!</div>
+                `,
+                asteroids: `
+                    <div>⭐ <strong>Астероиды</strong></div>
+                    <div>⬅️ Поворот влево</div>
+                    <div>➡️ Поворот вправо</div>
+                    <div>⬆️ Ускорение</div>
+                    <div>ПРОБЕЛ - Стрельба</div>
+                `
+            };
+            
+            // Показываем управление только для определенных игр
+            if (gameControls[game]) {
+                controlsContent.innerHTML = gameControls[game];
+                controlsDiv.classList.remove('hidden');
+            } else {
+                controlsDiv.classList.add('hidden');
+            }
+            
+            // 🔥 ИСПРАВЛЕННЫЕ РАЗМЕРЫ КАНВАСА ДЛЯ ТЕТРИСА
+            switch (game) {
+                case 'snake':
+                    canvas.width = 400;
+                    canvas.height = 400;
+                    playSnake(ctx, canvas);
+                    break;
+                case 'tetris':
+                    // 🔥 ИСПРАВЛЕНО - АДАПТИВНЫЕ РАЗМЕРЫ ДЛЯ ТЕТРИСА
+                    const isMobile = window.innerWidth <= 768;
+                    if (isMobile) {
+                        canvas.width = Math.min(300, window.innerWidth - 60);
+                        canvas.height = Math.min(400, window.innerHeight - 250);
+                    } else {
+                        canvas.width = 300;
+                        canvas.height = 450;
+                    }
+                    playTetris(ctx, canvas);
+                    break;
+                case '2048':
+                    canvas.width = 400;
+                    canvas.height = 400;
+                    play2048(ctx, canvas);
+                    break;
+                case 'pong':
+                    canvas.width = 500;
+                    canvas.height = 300;
+                    playPong(ctx, canvas);
+                    break;
+                case 'runner':
+                    canvas.width = 600;
+                    canvas.height = 400;
+                    playSpeedRunner(ctx, canvas);
+                    break;
+                case 'asteroids':
+                    canvas.width = 700;
+                    canvas.height = 500;
+                    playAsteroids(ctx, canvas);
+                    break;
+            }
+        }
+
+        function showGameMenu() {
+            // ПОЛНАЯ ОСТАНОВКА И ОЧИСТКА ИГРЫ
+            if (gameState.cleanup) {
+                gameState.cleanup();
+            }
+            gameState.running = false;
+            gameState = {};
+            currentGame = null;
+            
+            // Скрываем области
+            document.getElementById('gameMenu').classList.remove('hidden');
+            document.getElementById('gameArea').classList.add('hidden');
+            document.getElementById('gameControls').classList.add('hidden');
+        }
+
+        function restartGame() {
+            if (currentGame) {
+                // Полная очистка перед перезапуском
+                if (gameState.cleanup) {
+                    gameState.cleanup();
+                }
+                gameState.running = false;
+                gameState = {};
+                
+                // Перезапуск через небольшую задержку
+                setTimeout(() => {
+                    startGame(currentGame);
+                }, 100);
+            }
+        }
+
+        function playSnake(ctx, canvas) {
+            let gameLoopId;
+            gameState = {
+                snake: [{x: 200, y: 200}],
+                direction: {x: 0, y: 0},
+                food: {x: 100, y: 100},
+                score: 0,
+                running: true,
+                cleanup: function() {
+                    if (gameLoopId) {
+                        clearTimeout(gameLoopId);
+                        gameLoopId = null;
+                    }
+                    document.removeEventListener('keydown', keyHandler);
+                    this.running = false;
+                }
+            };
+
+            function gameLoop() {
+                if (!gameState.running) return;
+
+                ctx.fillStyle = '#001122';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                const head = {
+                    x: gameState.snake[0].x + gameState.direction.x,
+                    y: gameState.snake[0].y + gameState.direction.y
+                };
+                gameState.snake.unshift(head);
+
+                if (head.x === gameState.food.x && head.y === gameState.food.y) {
+                    gameState.score++;
+                    playSound('snakeEat');
+                    gameState.food = {
+                        x: Math.floor(Math.random() * 20) * 20,
+                        y: Math.floor(Math.random() * 20) * 20
+                    };
+                } else {
+                    gameState.snake.pop();
+                }
+
+                if (head.x < 0 || head.x >= canvas.width || head.y < 0 || head.y >= canvas.height ||
+                    gameState.snake.slice(1).some(s => s.x === head.x && s.y === head.y)) {
+                    gameState.running = false;
+                    playSound('snakeGameOver');
+                    showNotification(`🐍 Game Over! Счёт: ${gameState.score}`, 'error');
+                    return;
+                }
+
+                gameState.snake.forEach((segment, i) => {
+                    ctx.fillStyle = i === 0 ? '#667eea' : '#764ba2';
+                    ctx.fillRect(segment.x, segment.y, 18, 18);
+                });
+
+                ctx.fillStyle = '#ff4444';
+                ctx.fillRect(gameState.food.x, gameState.food.y, 18, 18);
+
+                ctx.fillStyle = '#fff';
+                ctx.font = '20px Arial';
+                ctx.fillText(`Счёт: ${gameState.score}`, 10, 30);
+
+                if (gameState.running) {
+                    gameLoopId = setTimeout(gameLoop, 150);
+                }
+            }
+
+            const keyHandler = function(e) {
+                if (!gameState.running) return;
+                switch(e.code) {
+                    case 'ArrowUp': if (gameState.direction.y === 0) gameState.direction = {x: 0, y: -20}; break;
+                    case 'ArrowDown': if (gameState.direction.y === 0) gameState.direction = {x: 0, y: 20}; break;
+                    case 'ArrowLeft': if (gameState.direction.x === 0) gameState.direction = {x: -20, y: 0}; break;
+                    case 'ArrowRight': if (gameState.direction.x === 0) gameState.direction = {x: 20, y: 0}; break;
+                }
+                e.preventDefault();
+            };
+
+            document.addEventListener('keydown', keyHandler);
+            gameLoop();
+        }
+
+        // 🔥 ПОЛНОСТЬЮ ИСПРАВЛЕННЫЙ ТЕТРИС - НЕ ВЫХОДИТ ЗА ГРАНИЦЫ
+        function playTetris(ctx, canvas) {
+            const ROWS = 20, COLS = 10;
+            const BLOCK_SIZE = Math.min(canvas.width / COLS, canvas.height / ROWS);
+            const board = Array(ROWS).fill().map(() => Array(COLS).fill(0));
+            
+            // 🔥 ОБНОВЛЯЕМ РАЗМЕРЫ КАНВАСА ТОЧНО ПОД БЛОКИ
+            canvas.width = COLS * BLOCK_SIZE;
+            canvas.height = ROWS * BLOCK_SIZE;
+            
+            const pieces = [
+                [[1,1,1,1]], // I
+                [[1,1],[1,1]], // O
+                [[0,1,0],[1,1,1]], // T
+                [[0,1,1],[1,1,0]], // S
+                [[1,1,0],[0,1,1]], // Z
+                [[1,0,0],[1,1,1]], // L
+                [[0,0,1],[1,1,1]]  // J
+            ];
+            
+            let currentPiece = {
+                shape: pieces[Math.floor(Math.random() * pieces.length)],
+                x: Math.floor(COLS / 2) - 1,
+                y: 0,
+                color: Math.floor(Math.random() * 7) + 1
+            };
+            
+            let score = 0;
+            let dropTime = Date.now();
+            let gameLoopId;
+            
+            gameState = { 
+                running: true,
+                cleanup: function() {
+                    if (gameLoopId) {
+                        clearTimeout(gameLoopId);
+                        gameLoopId = null;
+                    }
+                    document.removeEventListener('keydown', keyHandler);
+                    this.running = false;
+                }
+            };
+            
+            function drawBlock(x, y, color) {
+                const colors = ['#000', '#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff', '#ffffff'];
+                ctx.fillStyle = colors[color] || '#ccc';
+                ctx.fillRect(x * BLOCK_SIZE + 1, y * BLOCK_SIZE + 1, BLOCK_SIZE - 2, BLOCK_SIZE - 2);
+                ctx.strokeStyle = '#333';
+                ctx.strokeRect(x * BLOCK_SIZE, y * BLOCK_SIZE, BLOCK_SIZE, BLOCK_SIZE);
+            }
+            
+            function drawBoard() {
+                // Фон
+                ctx.fillStyle = '#000';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                
+                // Сетка (оптимизировано)
+                ctx.strokeStyle = '#222';
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                for (let x = 0; x <= COLS; x++) {
+                    const xPos = x * BLOCK_SIZE;
+                    ctx.moveTo(xPos, 0);
+                    ctx.lineTo(xPos, canvas.height);
+                }
+                for (let y = 0; y <= ROWS; y++) {
+                    const yPos = y * BLOCK_SIZE;
+                    ctx.moveTo(0, yPos);
+                    ctx.lineTo(canvas.width, yPos);
+                }
+                ctx.stroke();
+                
+                // Упавшие блоки
+                for (let y = 0; y < ROWS; y++) {
+                    for (let x = 0; x < COLS; x++) {
+                        if (board[y][x]) {
+                            drawBlock(x, y, board[y][x]);
+                        }
+                    }
+                }
+            }
+            
+            function drawPiece() {
+                currentPiece.shape.forEach((row, y) => {
+                    row.forEach((cell, x) => {
+                        if (cell) {
+                            const drawX = currentPiece.x + x;
+                            const drawY = currentPiece.y + y;
+                            if (drawX >= 0 && drawX < COLS && drawY >= 0 && drawY < ROWS) {
+                                drawBlock(drawX, drawY, currentPiece.color);
+                            }
+                        }
+                    });
+                });
+            }
+            
+            function canMove(piece, dx, dy, newShape = null) {
+                const shape = newShape || piece.shape;
+                return shape.every((row, y) =>
+                    row.every((cell, x) => {
+                        if (!cell) return true;
+                        const newX = piece.x + x + dx;
+                        const newY = piece.y + y + dy;
+                        // ИСПРАВЛЕНО: строгая проверка границ
+                        if (newX < 0 || newX >= COLS || newY < 0 || newY >= ROWS) {
+                            return false;
+                        }
+                        // Проверяем занятость клетки
+                        return !board[newY][newX];
+                    })
+                );
+            }
+            
+            function rotatePiece() {
+                // Поворот на 90 градусов по часовой стрелке
+                const rotated = currentPiece.shape[0].map((_, i) =>
+                    currentPiece.shape.map(row => row[i]).reverse()
+                );
+                
+                if (canMove(currentPiece, 0, 0, rotated)) {
+                    currentPiece.shape = rotated;
+                    playSound('tetrisRotate');
+                }
+            }
+            
+            function placePiece() {
+                currentPiece.shape.forEach((row, y) => {
+                    row.forEach((cell, x) => {
+                        if (cell) {
+                            const boardY = currentPiece.y + y;
+                            const boardX = currentPiece.x + x;
+                            if (boardY >= 0 && boardY < ROWS && boardX >= 0 && boardX < COLS) {
+                                board[boardY][boardX] = currentPiece.color;
+                            }
+                        }
+                    });
+                });
+                
+                // Убираем заполненные линии
+                for (let y = ROWS - 1; y >= 0; y--) {
+                    if (board[y].every(cell => cell)) {
+                        playSound('tetrisLine');
+                        board.splice(y, 1);
+                        board.unshift(Array(COLS).fill(0));
+                        score += 100;
+                        y++; // Проверяем эту линию снова
+                    }
+                }
+                
+                // Новая фигура
+                currentPiece = {
+                    shape: pieces[Math.floor(Math.random() * pieces.length)],
+                    x: Math.floor(COLS / 2) - 1,
+                    y: 0,
+                    color: Math.floor(Math.random() * 7) + 1
+                };
+                
+                // Проверка game over
+                if (!canMove(currentPiece, 0, 0)) {
+                    gameState.running = false;
+                    playSound('tetrisGameOver');
+                    showNotification(`🧩 Game Over! Счёт: ${score}`, 'error');
+                }
+            }
+            
+            function gameLoop() {
+                if (!gameState.running) return;
+                
+                const now = Date.now();
+                if (now - dropTime > 500) { // Фигура падает каждые 500мс
+                    if (canMove(currentPiece, 0, 1)) {
+                        currentPiece.y++;
+                    } else {
+                        placePiece();
+                    }
+                    dropTime = now;
+                }
+                
+                drawBoard();
+                drawPiece();
+                
+                // 🔥 ПРАВИЛЬНОЕ РАСПОЛОЖЕНИЕ СЧЁТА - СВЕРХУ КАНВАСА
+                ctx.fillStyle = '#fff';
+                ctx.font = 'bold 14px Arial';
+                ctx.textAlign = 'left';
+                ctx.fillText(`Счёт: ${score}`, 5, 15);
+                
+                if (gameState.running) {
+                    gameLoopId = setTimeout(gameLoop, 16); // ~60 FPS
+                }
+            }
+            
+            const keyHandler = function(e) {
+                if (!gameState.running) return;
+                
+                switch(e.code) {
+                    case 'ArrowLeft':
+                        if (canMove(currentPiece, -1, 0)) {
+                            currentPiece.x--;
+                            playSound('tetrisMove');
+                        }
+                        break;
+                    case 'ArrowRight':
+                        if (canMove(currentPiece, 1, 0)) {
+                            currentPiece.x++;
+                            playSound('tetrisMove');
+                        }
+                        break;
+                    case 'ArrowDown':
+                        if (canMove(currentPiece, 0, 1)) {
+                            currentPiece.y++;
+                            score += 1; // Бонус за ускорение
+                            playSound('tetrisMove');
+                        }
+                        break;
+                    case 'ArrowUp':
+                        rotatePiece();
+                        break;
+                }
+                e.preventDefault();
+            };
+            
+            document.addEventListener('keydown', keyHandler);
+            gameLoop();
+        }
+
+        function play2048(ctx, canvas) {
+            const SIZE = 4;
+            const CELL_SIZE = canvas.width / SIZE;
+            let board = Array(SIZE).fill().map(() => Array(SIZE).fill(0));
+            let score = 0;
+            
+            gameState = { 
+                running: true,
+                cleanup: function() {
+                    document.removeEventListener('keydown', keyHandler);
+                    this.running = false;
+                }
+            };
+            
+            function addRandomTile() {
+                const emptyCells = [];
+                for (let i = 0; i < SIZE; i++) {
+                    for (let j = 0; j < SIZE; j++) {
+                        if (board[i][j] === 0) {
+                            emptyCells.push([i, j]);
+                        }
+                    }
+                }
+                if (emptyCells.length > 0) {
+                    const [row, col] = emptyCells[Math.floor(Math.random() * emptyCells.length)];
+                    board[row][col] = Math.random() < 0.9 ? 2 : 4;
+                }
+            }
+            
+            function drawBoard() {
+                ctx.fillStyle = '#bbada0';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                
+                const colors = {
+                    0: '#cdc1b4', 2: '#eee4da', 4: '#ede0c8', 8: '#f2b179',
+                    16: '#f59563', 32: '#f67c5f', 64: '#f65e3b', 128: '#edcf72',
+                    256: '#edcc61', 512: '#edc850', 1024: '#edc53f', 2048: '#edc22e'
+                };
+                
+                for (let i = 0; i < SIZE; i++) {
+                    for (let j = 0; j < SIZE; j++) {
+                        const value = board[i][j];
+                        ctx.fillStyle = colors[value] || '#3c3a32';
+                        ctx.fillRect(j * CELL_SIZE + 5, i * CELL_SIZE + 5, CELL_SIZE - 10, CELL_SIZE - 10);
+                        
+                        if (value > 0) {
+                            ctx.fillStyle = value <= 4 ? '#776e65' : '#f9f6f2';
+                            ctx.font = `bold ${CELL_SIZE / 4}px Arial`;
+                            ctx.textAlign = 'center';
+                            ctx.fillText(value.toString(), j * CELL_SIZE + CELL_SIZE / 2, i * CELL_SIZE + CELL_SIZE / 2 + 10);
+                        }
+                    }
+                }
+                
+                ctx.fillStyle = '#776e65';
+                ctx.font = 'bold 20px Arial';
+                ctx.textAlign = 'left';
+                ctx.fillText(`Счёт: ${score}`, 10, 30);
+            }
+            
+            function move(direction) {
+                let moved = false;
+                const newBoard = board.map(row => [...row]);
+                
+                for (let i = 0; i < SIZE; i++) {
+                    let row = [];
+                    if (direction === 'left' || direction === 'right') {
+                        row = direction === 'left' ? newBoard[i] : newBoard[i].slice().reverse();
+                    } else {
+                        row = direction === 'up' ? newBoard.map(r => r[i]) : newBoard.map(r => r[i]).reverse();
+                    }
+                    
+                    const filtered = row.filter(cell => cell !== 0);
+                    const merged = [];
+                    
+                    for (let j = 0; j < filtered.length; j++) {
+                        if (j < filtered.length - 1 && filtered[j] === filtered[j + 1]) {
+                            merged.push(filtered[j] * 2);
+                            score += filtered[j] * 2;
+                            playSound('game2048merge');
+                            j++;
+                        } else {
+                            merged.push(filtered[j]);
+                        }
+                    }
+                    
+                    while (merged.length < SIZE) {
+                        merged.push(0);
+                    }
+                    
+                    if (direction === 'right' || direction === 'down') {
+                        merged.reverse();
+                    }
+                    
+                    for (let j = 0; j < SIZE; j++) {
+                        if (direction === 'left' || direction === 'right') {
+                            if (newBoard[i][j] !== merged[j]) moved = true;
+                            newBoard[i][j] = merged[j];
+                        } else {
+                            if (newBoard[j][i] !== merged[j]) moved = true;
+                            newBoard[j][i] = merged[j];
+                        }
+                    }
+                }
+                
+                if (moved) {
+                    board = newBoard;
+                    playSound('game2048move');
+                    addRandomTile();
+                    drawBoard();
+                    
+                    if (board.flat().includes(2048)) {
+                        playSound('game2048win');
+                        showNotification('🎉 Поздравляем! Вы достигли 2048!', 'success');
+                    }
+                    
+                    // Проверка на возможность хода
+                    if (!canMove()) {
+                        gameState.running = false;
+                        showNotification('😵 Нет доступных ходов! Игра окончена!', 'error');
+                    }
+                }
+            }
+            
+            function canMove() {
+                // Есть ли пустые клетки?
+                for (let i = 0; i < SIZE; i++) {
+                    for (let j = 0; j < SIZE; j++) {
+                        if (board[i][j] === 0) return true;
+                    }
+                }
+                
+                // Есть ли возможные слияния?
+                for (let i = 0; i < SIZE; i++) {
+                    for (let j = 0; j < SIZE; j++) {
+                        const current = board[i][j];
+                        if (
+                            (i > 0 && board[i-1][j] === current) ||
+                            (i < SIZE-1 && board[i+1][j] === current) ||
+                            (j > 0 && board[i][j-1] === current) ||
+                            (j < SIZE-1 && board[i][j+1] === current)
+                        ) {
+                            return true;
+                        }
+                    }
+                }
+                
+                return false;
+            }
+            
+            const keyHandler = function(e) {
+                if (!gameState.running) return;
+                switch(e.code) {
+                    case 'ArrowLeft': move('left'); break;
+                    case 'ArrowRight': move('right'); break;
+                    case 'ArrowUp': move('up'); break;
+                    case 'ArrowDown': move('down'); break;
+                }
+                e.preventDefault();
+            };
+            
+            document.addEventListener('keydown', keyHandler);
+            
+            addRandomTile();
+            addRandomTile();
+            drawBoard();
+        }
+
+        function playPong(ctx, canvas) {
+            let gameLoopId;
+            gameState = {
+                running: true,
+                paddle1: { x: 10, y: canvas.height / 2 - 40, width: 10, height: 60, speed: 5 },
+                paddle2: { x: canvas.width - 20, y: canvas.height / 2 - 40, width: 10, height: 60, speed: 4 },
+                ball: { x: canvas.width / 2, y: canvas.height / 2, dx: 3, dy: 3, radius: 6 },
+                score1: 0,
+                score2: 0,
+                keys: {},
+                cleanup: function() {
+                    if (gameLoopId) {
+                        cancelAnimationFrame(gameLoopId);
+                        gameLoopId = null;
+                    }
+                    document.removeEventListener('keydown', keyDownHandler);
+                    document.removeEventListener('keyup', keyUpHandler);
+                    this.running = false;
+                }
+            };
+            
+            function gameLoop() {
+                if (!gameState.running) return;
+                
+                if (gameState.keys['ArrowUp'] && gameState.paddle1.y > 0) {
+                    gameState.paddle1.y -= gameState.paddle1.speed;
+                }
+                if (gameState.keys['ArrowDown'] && gameState.paddle1.y < canvas.height - gameState.paddle1.height) {
+                    gameState.paddle1.y += gameState.paddle1.speed;
+                }
+                
+                ctx.fillStyle = '#000';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                
+                gameState.ball.x += gameState.ball.dx;
+                gameState.ball.y += gameState.ball.dy;
+                
+                if (gameState.ball.y <= gameState.ball.radius || gameState.ball.y >= canvas.height - gameState.ball.radius) {
+                    gameState.ball.dy = -gameState.ball.dy;
+                    playSound('pongBounce');
+                }
+                
+                if (gameState.ball.x - gameState.ball.radius <= gameState.paddle1.x + gameState.paddle1.width &&
+                    gameState.ball.y >= gameState.paddle1.y &&
+                    gameState.ball.y <= gameState.paddle1.y + gameState.paddle1.height) {
+                    gameState.ball.dx = Math.abs(gameState.ball.dx);
+                    playSound('pongHit');
+                }
+                
+                if (gameState.ball.x + gameState.ball.radius >= gameState.paddle2.x &&
+                    gameState.ball.y >= gameState.paddle2.y &&
+                    gameState.ball.y <= gameState.paddle2.y + gameState.paddle2.height) {
+                    gameState.ball.dx = -Math.abs(gameState.ball.dx);
+                    playSound('pongHit');
+                }
+                
+                if (gameState.ball.x <= 0) {
+                    gameState.score2++;
+                    playSound('pongGoal');
+                    gameState.ball.x = canvas.width / 2;
+                    gameState.ball.y = canvas.height / 2;
+                    gameState.ball.dx = 3;
+                }
+                if (gameState.ball.x >= canvas.width) {
+                    gameState.score1++;
+                    playSound('pongGoal');
+                    gameState.ball.x = canvas.width / 2;
+                    gameState.ball.y = canvas.height / 2;
+                    gameState.ball.dx = -3;
+                }
+                
+                // ИИ бота (улучшенный)
+                const paddleCenter = gameState.paddle2.y + gameState.paddle2.height / 2;
+                const ballDistance = Math.abs(gameState.ball.x - gameState.paddle2.x);
+                const reactionSpeed = ballDistance > 200 ? 0.3 : 0.7;
+                const randomFactor = (Math.random() - 0.5) * 20;
+                const targetY = gameState.ball.y + randomFactor;
+                
+                if (Math.random() < reactionSpeed) {
+                    if (targetY < paddleCenter - 15) {
+                        gameState.paddle2.y = Math.max(0, gameState.paddle2.y - gameState.paddle2.speed);
+                    } else if (targetY > paddleCenter + 15) {
+                        gameState.paddle2.y = Math.min(canvas.height - gameState.paddle2.height, gameState.paddle2.y + gameState.paddle2.speed);
+                    }
+                }
+                
+                ctx.fillStyle = '#fff';
+                ctx.fillRect(gameState.paddle1.x, gameState.paddle1.y, gameState.paddle1.width, gameState.paddle1.height);
+                ctx.fillRect(gameState.paddle2.x, gameState.paddle2.y, gameState.paddle2.width, gameState.paddle2.height);
+                
+                ctx.beginPath();
+                ctx.arc(gameState.ball.x, gameState.ball.y, gameState.ball.radius, 0, Math.PI * 2);
+                ctx.fill();
+                
+                ctx.font = '20px Arial';
+                ctx.textAlign = 'center';
+                ctx.fillText(`${gameState.score1} : ${gameState.score2}`, canvas.width / 2, 30);
+                
+                if (gameState.running) {
+                    gameLoopId = requestAnimationFrame(gameLoop);
+                }
+            }
+            
+            const keyDownHandler = function(e) {
+                gameState.keys[e.code] = true;
+                e.preventDefault();
+            };
+            
+            const keyUpHandler = function(e) {
+                gameState.keys[e.code] = false;
+                e.preventDefault();
+            };
+            
+            document.addEventListener('keydown', keyDownHandler);
+            document.addEventListener('keyup', keyUpHandler);
+            gameLoop();
+        }
+
+        function playSpeedRunner(ctx, canvas) {
+            let gameLoopId;
+            gameState = {
+                running: true,
+                player: { x: canvas.width / 2 - 25, y: canvas.height - 100, width: 50, height: 80, speed: 6 },
+                obstacles: [],
+                score: 0,
+                gameSpeed: 3,
+                keys: {},
+                lastObstacle: 0,
+                cleanup: function() {
+                    if (gameLoopId) {
+                        cancelAnimationFrame(gameLoopId);
+                        gameLoopId = null;
+                    }
+                    document.removeEventListener('keydown', keyDownHandler);
+                    document.removeEventListener('keyup', keyUpHandler);
+                    this.running = false;
+                }
+            };
+            
+            function createObstacle() {
+                const lanes = [canvas.width * 0.25, canvas.width * 0.5, canvas.width * 0.75];
+                const lane = lanes[Math.floor(Math.random() * lanes.length)];
+                
+                gameState.obstacles.push({
+                    x: lane - 25,
+                    y: -100,
+                    width: 50,
+                    height: 80
+                });
+            }
+            
+            function drawPlayer() {
+                const { x, y, width, height } = gameState.player;
+                ctx.fillStyle = '#ff3366';
+                ctx.fillRect(x, y, width, height);
+                ctx.strokeStyle = '#ff1144';
+                ctx.lineWidth = 2;
+                ctx.strokeRect(x, y, width, height);
+            }
+            
+            function drawObstacle(obstacle) {
+                ctx.fillStyle = '#444';
+                ctx.fillRect(obstacle.x, obstacle.y, obstacle.width, obstacle.height);
+                ctx.strokeStyle = '#222';
+                ctx.lineWidth = 1;
+                ctx.strokeRect(obstacle.x, obstacle.y, obstacle.width, obstacle.height);
+            }
+            
+            function gameLoop() {
+                if (!gameState.running) return;
+                
+                const now = Date.now();
+                let isMoving = false;
+                
+                // Управление игроком
+                if (gameState.keys['ArrowLeft'] && gameState.player.x > 0) {
+                    gameState.player.x -= gameState.player.speed;
+                    isMoving = true;
+                }
+                if (gameState.keys['ArrowRight'] && gameState.player.x < canvas.width - gameState.player.width) {
+                    gameState.player.x += gameState.player.speed;
+                    isMoving = true;
+                }
+                
+                // 🔊 ЗВУК ДВИГАТЕЛЯ при движении
+                if (isMoving) {
+                    playSound('carEngine');
+                }
+                
+                // Фон дороги
+                ctx.fillStyle = '#333';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                
+                // Дорожная разметка
+                ctx.strokeStyle = '#fff';
+                ctx.lineWidth = 3;
+                ctx.setLineDash([20, 20]);
+                ctx.beginPath();
+                ctx.moveTo(canvas.width / 3, 0);
+                ctx.lineTo(canvas.width / 3, canvas.height);
+                ctx.moveTo(canvas.width * 2 / 3, 0);
+                ctx.lineTo(canvas.width * 2 / 3, canvas.height);
+                ctx.stroke();
+                ctx.setLineDash([]);
+                
+                // Создание препятствий
+                if (now - gameState.lastObstacle > 1000) {
+                    createObstacle();
+                    gameState.lastObstacle = now;
+                }
+                
+                // Обновление препятствий
+                gameState.obstacles.forEach((obstacle, index) => {
+                    obstacle.y += gameState.gameSpeed;
+                    if (obstacle.y > canvas.height) {
+                        gameState.obstacles.splice(index, 1);
+                        gameState.score += 10;
+                        // Увеличиваем скорость постепенно
+                        if (gameState.score % 100 === 0) {
+                            gameState.gameSpeed += 0.5;
+                        }
+                    }
+                });
+                
+                // Проверка столкновений
+                gameState.obstacles.forEach(obstacle => {
+                    if (gameState.player.x < obstacle.x + obstacle.width &&
+                        gameState.player.x + gameState.player.width > obstacle.x &&
+                        gameState.player.y < obstacle.y + obstacle.height &&
+                        gameState.player.y + gameState.player.height > obstacle.y) {
+                        
+                        gameState.running = false;
+                        playSound('carCrash');
+                        showNotification(`🚗 Авария! Финальный счёт: ${gameState.score}`, 'error');
+                        return;
+                    }
+                });
+                
+                // Отрисовка
+                drawPlayer();
+                gameState.obstacles.forEach(drawObstacle);
+                
+                // Интерфейс
+                ctx.fillStyle = '#fff';
+                ctx.font = 'bold 24px Arial';
+                ctx.textAlign = 'left';
+                ctx.fillText(`Счёт: ${gameState.score}`, 20, 40);
+                ctx.fillText(`Скорость: ${gameState.gameSpeed.toFixed(1)}`, 20, 70);
+                
+                if (gameState.running) {
+                    gameLoopId = requestAnimationFrame(gameLoop);
+                }
+            }
+            
+            const keyDownHandler = function(e) {
+                gameState.keys[e.code] = true;
+                e.preventDefault();
+            };
+            
+            const keyUpHandler = function(e) {
+                gameState.keys[e.code] = false;
+                e.preventDefault();
+            };
+            
+            document.addEventListener('keydown', keyDownHandler);
+            document.addEventListener('keyup', keyUpHandler);
+            gameLoop();
+        }
+
+        function playAsteroids(ctx, canvas) {
+            let gameLoopId;
+            gameState = {
+                running: true,
+                ship: { x: canvas.width / 2, y: canvas.height / 2, angle: 0, vx: 0, vy: 0, size: 10 },
+                bullets: [],
+                asteroids: [],
+                score: 0,
+                keys: {},
+                lastShot: 0,
+                cleanup: function() {
+                    if (gameLoopId) {
+                        cancelAnimationFrame(gameLoopId);
+                        gameLoopId = null;
+                    }
+                    document.removeEventListener('keydown', keyDownHandler);
+                    document.removeEventListener('keyup', keyUpHandler);
+                    this.running = false;
+                }
+            };
+            
+            for (let i = 0; i < 4; i++) {
+                createAsteroid(Math.random() * canvas.width, Math.random() * canvas.height, 30);
+            }
+            
+            function createAsteroid(x, y, size) {
+                gameState.asteroids.push({
+                    x: x,
+                    y: y,
+                    vx: (Math.random() - 0.5) * 2,
+                    vy: (Math.random() - 0.5) * 2,
+                    size: size,
+                    angle: 0,
+                    rotation: (Math.random() - 0.5) * 0.1
+                });
+            }
+            
+            function drawShip() {
+                const { x, y, angle, size } = gameState.ship;
+                
+                ctx.save();
+                ctx.translate(x, y);
+                ctx.rotate(angle);
+                
+                ctx.strokeStyle = '#00ff88';
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.moveTo(size, 0);
+                ctx.lineTo(-size, -size/2);
+                ctx.lineTo(-size/2, 0);
+                ctx.lineTo(-size, size/2);
+                ctx.closePath();
+                ctx.stroke();
+                
+                // Показываем тягу при ускорении
+                if (gameState.keys['ArrowUp']) {
+                    ctx.strokeStyle = '#ff4400';
+                    ctx.beginPath();
+                    ctx.moveTo(-size, 0);
+                    ctx.lineTo(-size * 1.5, 0);
+                    ctx.stroke();
+                }
+                
+                ctx.restore();
+            }
+            
+            function drawAsteroid(asteroid) {
+                const { x, y, size, angle } = asteroid;
+                
+                ctx.save();
+                ctx.translate(x, y);
+                ctx.rotate(angle);
+                
+                ctx.strokeStyle = '#888';
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                
+                // Рисуем неровный астероид
+                const points = 8;
+                for (let i = 0; i <= points; i++) {
+                    const a = (i / points) * Math.PI * 2;
+                    const r = size * (0.8 + Math.sin(a * 3) * 0.2);
+                    const x = Math.cos(a) * r;
+                    const y = Math.sin(a) * r;
+                    if (i === 0) {
+                        ctx.moveTo(x, y);
+                    } else {
+                        ctx.lineTo(x, y);
+                    }
+                }
+                ctx.closePath();
+                ctx.stroke();
+                
+                ctx.restore();
+            }
+            
+            function drawBullet(bullet) {
+                ctx.fillStyle = '#00ffff';
+                ctx.beginPath();
+                ctx.arc(bullet.x, bullet.y, 3, 0, Math.PI * 2);
+                ctx.fill();
+                
+                // Эффект хвоста
+                ctx.strokeStyle = '#0088aa';
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                ctx.moveTo(bullet.x, bullet.y);
+                ctx.lineTo(bullet.x - bullet.vx * 2, bullet.y - bullet.vy * 2);
+                ctx.stroke();
+            }
+            
+            function wrapPosition(obj) {
+                if (obj.x < 0) obj.x = canvas.width;
+                if (obj.x > canvas.width) obj.x = 0;
+                if (obj.y < 0) obj.y = canvas.height;
+                if (obj.y > canvas.height) obj.y = 0;
+            }
+            
+            function gameLoop() {
+                if (!gameState.running) return;
+                
+                const now = Date.now();
+                
+                // Управление кораблем
+                if (gameState.keys['ArrowLeft']) {
+                    gameState.ship.angle -= 0.15;
+                }
+                if (gameState.keys['ArrowRight']) {
+                    gameState.ship.angle += 0.15;
+                }
+                if (gameState.keys['ArrowUp']) {
+                    gameState.ship.vx += Math.cos(gameState.ship.angle) * 0.3;
+                    gameState.ship.vy += Math.sin(gameState.ship.angle) * 0.3;
+                    playSound('asteroidEngine');
+                }
+                if (gameState.keys['Space'] && now - gameState.lastShot > 250) {
+                    playSound('asteroidShoot');
+                    gameState.bullets.push({
+                        x: gameState.ship.x + Math.cos(gameState.ship.angle) * gameState.ship.size,
+                        y: gameState.ship.y + Math.sin(gameState.ship.angle) * gameState.ship.size,
+                        vx: gameState.ship.vx + Math.cos(gameState.ship.angle) * 8,
+                        vy: gameState.ship.vy + Math.sin(gameState.ship.angle) * 8,
+                        life: 120
+                    });
+                    gameState.lastShot = now;
+                }
+                
+                // Фон
+                ctx.fillStyle = '#000011';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                
+                // Звезды
+                ctx.fillStyle = '#ffffff';
+                for (let i = 0; i < 50; i++) {
+                    const x = (i * 37) % canvas.width;
+                    const y = (i * 73) % canvas.height;
+                    ctx.fillRect(x, y, 1, 1);
+                }
+                
+                // Обновление корабля
+                gameState.ship.x += gameState.ship.vx;
+                gameState.ship.y += gameState.ship.vy;
+                gameState.ship.vx *= 0.99;
+                gameState.ship.vy *= 0.99;
+                wrapPosition(gameState.ship);
+                
+                // Обновление астероидов
+                gameState.asteroids.forEach(asteroid => {
+                    asteroid.x += asteroid.vx;
+                    asteroid.y += asteroid.vy;
+                    asteroid.angle += asteroid.rotation;
+                    wrapPosition(asteroid);
+                });
+                
+                // Обновление пуль
+                gameState.bullets.forEach((bullet, index) => {
+                    bullet.x += bullet.vx;
+                    bullet.y += bullet.vy;
+                    bullet.life--;
+                    
+                    if (bullet.life <= 0) {
+                        gameState.bullets.splice(index, 1);
+                    } else {
+                        wrapPosition(bullet);
+                    }
+                });
+                
+                // Столкновения пуль с астероидами
+                gameState.bullets.forEach((bullet, bulletIndex) => {
+                    gameState.asteroids.forEach((asteroid, asteroidIndex) => {
+                        const dx = bullet.x - asteroid.x;
+                        const dy = bullet.y - asteroid.y;
+                        const distance = Math.sqrt(dx * dx + dy * dy);
+                        
+                        if (distance < asteroid.size) {
+                            gameState.bullets.splice(bulletIndex, 1);
+                            gameState.score += Math.floor(asteroid.size);
+                            playSound('asteroidHit');
+                            
+                            // Разбиваем большие астероиды
+                            if (asteroid.size > 15) {
+                                for (let i = 0; i < 2; i++) {
+                                    createAsteroid(
+                                        asteroid.x + (Math.random() - 0.5) * 20,
+                                        asteroid.y + (Math.random() - 0.5) * 20,
+                                        asteroid.size / 2
+                                    );
+                                }
+                            }
+                            
+                            gameState.asteroids.splice(asteroidIndex, 1);
+                        }
+                    });
+                });
+                
+                // Столкновение корабля с астероидами
+                gameState.asteroids.forEach(asteroid => {
+                    const dx = gameState.ship.x - asteroid.x;
+                    const dy = gameState.ship.y - asteroid.y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if (distance < asteroid.size + gameState.ship.size) {
+                        gameState.running = false;
+                        playSound('asteroidDestroy');
+                        showNotification(`⭐ Корабль уничтожен! Счёт: ${gameState.score}`, 'error');
+                        return;
+                    }
+                });
+                
+                // Отрисовка
+                drawShip();
+                gameState.asteroids.forEach(drawAsteroid);
+                gameState.bullets.forEach(drawBullet);
+                
+                // Интерфейс
+                ctx.fillStyle = '#fff';
+                ctx.font = 'bold 24px Arial';
+                ctx.textAlign = 'left';
+                ctx.fillText(`Счёт: ${gameState.score}`, 20, 40);
+                ctx.fillText(`Астероидов: ${gameState.asteroids.length}`, 20, 70);
+                
+                // Следующая волна
+                if (gameState.asteroids.length === 0) {
+                    for (let i = 0; i < 5; i++) {
+                        createAsteroid(Math.random() * canvas.width, Math.random() * canvas.height, 30);
+                    }
+                    showNotification('🌊 Новая волна астероидов!', 'warning');
+                }
+                
+                if (gameState.running) {
+                    gameLoopId = requestAnimationFrame(gameLoop);
+                }
+            }
+            
+            const keyDownHandler = function(e) {
+                gameState.keys[e.code] = true;
+                e.preventDefault();
+            };
+            
+            const keyUpHandler = function(e) {
+                gameState.keys[e.code] = false;
+                e.preventDefault();
+            };
+            
+            document.addEventListener('keydown', keyDownHandler);
+            document.addEventListener('keyup', keyUpHandler);
+            gameLoop();
+        }
+
+        function calculate() {
+            const input = document.getElementById('calcInput').value;
+            const output = document.getElementById('calcOutput');
+            try {
+                const result = Function(`"use strict"; return (${input})`)();
+                output.innerHTML = `Результат: ${result}<br>Двоичное: ${result.toString(2)}<br>Восьмеричное: ${result.toString(8)}<br>Шестнадцатеричное: ${result.toString(16).toUpperCase()}`;
+                playSound('toolCalculate');
+            } catch (e) {
+                output.textContent = `Ошибка: ${e.message}`;
+                playSound('toolError');
+            }
+        }
+
+        function generatePassword() {
+            const length = parseInt(document.getElementById('passLength').value) || 12;
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()';
+            let result = '';
+            for (let i = 0; i < length; i++) {
+                result += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            document.getElementById('passOutput').textContent = `Пароль: ${result}`;
+            playSound('toolGenerate');
+        }
+
+        function convertColor() {
+            const input = document.getElementById('colorInput').value;
+            const output = document.getElementById('colorOutput');
+            try {
+                const hex = input.replace('#', '');
+                const r = parseInt(hex.substr(0, 2), 16);
+                const g = parseInt(hex.substr(2, 2), 16);
+                const b = parseInt(hex.substr(4, 2), 16);
+                
+                const hsl = rgbToHsl(r, g, b);
+                output.innerHTML = `RGB: rgb(${r}, ${g}, ${b})<br>HSL: hsl(${hsl[0]}, ${hsl[1]}%, ${hsl[2]}%)<br>Decimal: ${parseInt(hex, 16)}`;
+                playSound('toolConvert');
+            } catch (e) {
+                output.textContent = 'Неверный формат цвета';
+                playSound('toolError');
+            }
+        }
+
+        function rgbToHsl(r, g, b) {
+            r /= 255; g /= 255; b /= 255;
+            const max = Math.max(r, g, b), min = Math.min(r, g, b);
+            let h, s, l = (max + min) / 2;
+
+            if (max === min) {
+                h = s = 0;
+            } else {
+                const d = max - min;
+                s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+                switch (max) {
+                    case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+                    case g: h = (b - r) / d + 2; break;
+                    case b: h = (r - g) / d + 4; break;
+                }
+                h /= 6;
+            }
+
+            return [Math.round(h * 360), Math.round(s * 100), Math.round(l * 100)];
+        }
+
+        function encodeBase64() {
+            const input = document.getElementById('base64Input').value;
+            const output = document.getElementById('base64Output');
+            try {
+                const encoded = btoa(unescape(encodeURIComponent(input)));
+                output.textContent = `Закодировано: ${encoded}`;
+                playSound('toolConvert');
+            } catch (e) {
+                output.textContent = `Ошибка: ${e.message}`;
+                playSound('toolError');
+            }
+        }
+
+        function decodeBase64() {
+            const input = document.getElementById('base64Input').value;
+            const output = document.getElementById('base64Output');  
+            try {
+                const decoded = decodeURIComponent(escape(atob(input)));
+                output.textContent = `Декодировано: ${decoded}`;
+                playSound('toolConvert');
+            } catch (e) {
+                output.textContent = `Ошибка: ${e.message}`;
+                playSound('toolError');
+            }
+        }
+
+        function shortenUrl() {
+            const input = document.getElementById('urlInput').value;
+            const output = document.getElementById('urlOutput');
+            
+            if (!input.startsWith('http')) {
+                output.textContent = 'Ошибка: URL должен начинаться с http:// или https://';
+                playSound('toolError');
+                return;
+            }
+            
+            const hash = btoa(input).substring(0, 8).replace(/[+/=]/g, '');
+            const shortUrl = `https://alex.dev/${hash}`;
+            
+            output.innerHTML = `Короткая ссылка: <a href="${input}" target="_blank">${shortUrl}</a><br>
+                               <small>Клики: ${Math.floor(Math.random() * 1000) + 1}</small>`;
+            playSound('toolGenerate');
+        }
+
+        // Блокировка F12 с секретным обходом
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ю' || e.key === 'Ю' || e.code === 'Period') {
+                secretKeyPressed = true;
+                setTimeout(() => { secretKeyPressed = false; }, 1000);
+                return;
+            }
+            
+            if (e.key === 'F12') {
+                if (secretKeyPressed) {
+                    secretKeyPressed = false;
+                    showNotification(translations[currentLanguage]['f12-unlocked'] || '🔓 Секретный доступ разрешён!', 'success');
+                    return;
+                }
+                
+                e.preventDefault();
+                showNotification(translations[currentLanguage]['f12-blocked'] || '🚫 F12 заблокирован!', 'error');
+                return false;
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // 🚀 ПРИНУДИТЕЛЬНАЯ УСТАНОВКА ТЁМНОЙ ТЕМЫ ПО УМОЛЧАНИЮ
+            document.documentElement.setAttribute('data-theme', 'dark');
+            document.documentElement.style.colorScheme = 'dark';
+            document.body.style.backgroundColor = '#0a0a0a';
+            document.body.style.color = '#ffffff';
+            
+            switchPage(0);
+            
+            startMatrixBackground();
+            
+            setTimeout(() => {
+                animateCounters();
+                animateSkills();
+            }, 500);
+
+            document.addEventListener('click', function(e) {
+                if (e.target.classList.contains('modal')) {
+                    e.target.classList.remove('visible');
+                }
+            });
+            
+            window.addEventListener('resize', function() {
+                if (matrixAnimationId) {
+                    cancelAnimationFrame(matrixAnimationId);
+                }
+                startMatrixBackground();
+            });
+            
+            // 🚀 УМНАЯ ИНИЦИАЛИЗАЦИЯ ЗВУКОВ
+            
+            // Проверяем доступность звуков
+            checkSoundsAvailability();
+            
+            // Инициализация звуков при клике (если доступны)
+            document.addEventListener('click', function enableAudio() {
+                if (soundsEnabled) {
+                    initAudio();
+                    preloadSounds(); // Предзагружаем основные звуки
+                    console.log('🎵 Звуковая система готова!');
+                }
+            }, { once: true });
+            
+            // Дополнительная инициализация
+            setTimeout(() => {
+                if (soundsEnabled) {
+                    initAudio();
+                }
+            }, 500);
+            
+            // 🔊 МИНИМАЛИСТИЧНАЯ ЗВУКОВАЯ СХЕМА - ТОЛЬКО ВАЖНЫЕ ЭЛЕМЕНТЫ
+            
+            // Функция для добавления звука с защитой от всплытия
+            function addSoundToElement(element, eventType = 'mouseenter', soundName = 'buttonHover', allowOverlap = false) {
+                element.addEventListener(eventType, (e) => {
+                    e.stopPropagation(); // Останавливаем всплытие события
+                    playSound(soundName, allowOverlap);
+                });
+            }
+            
+            // ТОЛЬКО ВАЖНЫЕ ИНТЕРАКТИВНЫЕ ЭЛЕМЕНТЫ:
+            
+            // 1. Кнопки навигации (тема, игры, инструменты, языки) - ГЛАВНЫЕ КНОПКИ
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                addSoundToElement(btn, 'mouseenter', 'buttonHover', true); // Разрешаем наложение
+                addSoundToElement(btn, 'click', 'buttonClick', true);
+            });
+            
+            // 2. Кнопка "Посмотреть все проекты" - ВАЖНАЯ КНОПКА
+            document.querySelectorAll('.projects-btn').forEach(btn => {
+                addSoundToElement(btn, 'mouseenter', 'buttonHover', true);
+                addSoundToElement(btn, 'click', 'buttonClick', true);
+            });
+            
+            // 3. Карточки контактов - ИНТЕРАКТИВНЫЕ ССЫЛКИ
+            document.querySelectorAll('.contact-card').forEach(card => {
+                addSoundToElement(card, 'mouseenter', 'buttonHover', true);
+            });
+            
+            // 4. Игровые кнопки (внутри модалок)
+            document.querySelectorAll('.game-btn').forEach(btn => {
+                addSoundToElement(btn, 'mouseenter', 'buttonHover', true);
+                addSoundToElement(btn, 'click', 'buttonClick', true);
+            });
+            
+            // 5. Закрытие модальных окон
+            document.querySelectorAll('.modal-close').forEach(btn => {
+                addSoundToElement(btn, 'mouseenter', 'buttonHover', true);
+                addSoundToElement(btn, 'click', 'buttonClick', true);
+            });
+            
+            console.log('✅ Минималистичная звуковая схема настроена!');
+            
+            // Автозапуск фоновой музыки при первом клике (если звуки доступны)
+            document.addEventListener('click', () => {
+                if (!soundsEnabled) return;
+                
+                try {
+                    const bgMusic = loadSound('backgroundMusic');
+                    if (bgMusic) {
+                        bgMusic.loop = true;
+                        bgMusic.volume = 0.2;
+                        bgMusic.play().catch(() => {});
+                    }
+                } catch (e) {
+                    // Игнорируем ошибки
+                }
+            }, { once: true });
+        });
+    </script>
+</body>
+</html>
+                
